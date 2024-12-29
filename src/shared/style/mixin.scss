@@ -1,0 +1,18 @@
+@import "./preset/var";
+
+@mixin ts($obj, $obj2: "empty", $obj3: "empty") {
+  transition: $obj $th;
+
+  @if $obj2 != "empty" {
+    transition:
+      $obj $th,
+      $obj2 $th;
+  }
+
+  @if $obj3 != "empty" {
+    transition:
+      $obj $th,
+      $obj2 $th,
+      $obj3 $th;
+  }
+}

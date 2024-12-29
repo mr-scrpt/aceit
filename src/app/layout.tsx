@@ -1,20 +1,10 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "@/shared/style/preset/globals.scss";
+import { gilroy } from "@/shared/font";
 import deco from "@/shared/style/deco.module.scss";
-import layout from "./layout.module.scss";
-import clsx from "clsx";
+import "@/shared/style/preset/globals.scss";
 import { Header } from "@/widget/header/ui/header";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import clsx from "clsx";
+import type { Metadata } from "next";
+import layout from "./layout.module.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,14 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={clsx(
-          geistSans.variable,
-          geistMono.variable,
-          deco.spot,
-          layout.layout,
-        )}
-      >
+      <body className={clsx(gilroy.className, deco.spot, layout.layout)}>
         <Header></Header>
         <main>{children}</main>
       </body>
