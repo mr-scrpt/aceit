@@ -50,8 +50,8 @@ export const IconLogoWithText = (props: SVGProps<SVGSVGElement>) => {
           y2="35.8963"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#AE71E2" />
-          <stop offset="1" stop-color="#4C00E6" />
+          <stop stopColor="#AE71E2" />
+          <stop offset="1" stopColor="#4C00E6" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_297_650"
@@ -61,8 +61,8 @@ export const IconLogoWithText = (props: SVGProps<SVGSVGElement>) => {
           y2="35.8963"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#AE71E2" />
-          <stop offset="1" stop-color="#4C00E6" />
+          <stop stopColor="#AE71E2" />
+          <stop offset="1" stopColor="#4C00E6" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_297_650"
@@ -72,8 +72,8 @@ export const IconLogoWithText = (props: SVGProps<SVGSVGElement>) => {
           y2="35.8963"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#AE71E2" />
-          <stop offset="1" stop-color="#4C00E6" />
+          <stop stopColor="#AE71E2" />
+          <stop offset="1" stopColor="#4C00E6" />
         </linearGradient>
       </defs>
     </svg>

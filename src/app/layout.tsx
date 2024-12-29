@@ -4,6 +4,7 @@ import "@/shared/style/preset/globals.scss";
 import deco from "@/shared/style/deco.module.scss";
 import layout from "./layout.module.scss";
 import clsx from "clsx";
+import { Header } from "@/widget/header/ui/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        // className={`${geistSans.variable} ${geistMono.variable} ${deco.spot} ${layout.layout}`}
         className={clsx(
           geistSans.variable,
           geistMono.variable,
@@ -36,7 +36,8 @@ export default function RootLayout({
           layout.layout,
         )}
       >
-        {children}
+        <Header></Header>
+        <main>{children}</main>
       </body>
     </html>
   );

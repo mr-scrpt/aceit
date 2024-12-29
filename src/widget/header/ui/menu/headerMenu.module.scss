@@ -1,0 +1,17 @@
+// headerMenu.module.scss
+.list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.item {
+  // стили для пункта меню
+}
+
+.link {
+  // стили для ссылки
+  &:hover {
+    // стили для hover состояния
+  }
+}

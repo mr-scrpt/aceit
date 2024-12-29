@@ -1,8 +1,10 @@
 import { FC, HTMLAttributes } from "react";
-import { Layout } from "./layout/layout";
+import { HeaderLayout } from "./layout/headerLayout";
+import { Logo } from "./logo/logo";
+import { HeaderMenu } from "./menu/headerMenu";
 
 interface Header extends HTMLAttributes<HTMLDivElement> {}
 
 export const Header: FC<Header> = (props) => {
-  return <Layout>HEADER</Layout>;
+  return <HeaderLayout LogoSlot={<Logo />} MenuSlot={<HeaderMenu />} />;
 };
