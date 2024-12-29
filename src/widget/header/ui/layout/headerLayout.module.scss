@@ -1,9 +1,5 @@
 @import "@/shared/style/grid/smart-grid";
 
-.layout {
-  @include wrapper;
-}
-
 .inner {
   @include row-flex;
 

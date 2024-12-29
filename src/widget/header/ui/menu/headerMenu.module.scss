@@ -1,4 +1,4 @@
-@import "@/shared/style/mixin";
+@import "@/shared/style/index";
 
 .list {
   display: flex;
@@ -9,7 +9,7 @@
 .link {
   font-weight: 500;
 
-  @include ts(opacity);
+  @include mixin-ts(opacity);
 
   &:hover {
     opacity: 0.6;

@@ -1,0 +1,5 @@
+@import "@/shared/style/grid/smart-grid";
+
+.wrapper {
+  @include wrapper;
+}

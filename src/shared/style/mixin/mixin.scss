@@ -1,18 +1,16 @@
-@import "./preset/var";
-
 @mixin ts($obj, $obj2: "empty", $obj3: "empty") {
-  transition: $obj $th;
+  transition: $obj var(--th);
 
   @if $obj2 != "empty" {
     transition:
-      $obj $th,
-      $obj2 $th;
+      $obj var(--th),
+      $obj2 var(--th);
   }
 
   @if $obj3 != "empty" {
     transition:
-      $obj $th,
-      $obj2 $th,
-      $obj3 $th;
+      $obj var(--th),
+      $obj2 var(--th),
+      $obj3 var(--th);
   }
 }
