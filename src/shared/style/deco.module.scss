@@ -1,0 +1,20 @@
+.spot {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: min(950px, 90%);
+    aspect-ratio: 950 / 280;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: radial-gradient(
+      81.35% 81.35% at 50% 50%,
+      #ffffff 0%,
+      #a77ebf 14%,
+      #7950a3 43%,
+      #8100d0 66.67%,
+      #3d1f4f 100%
+    );
+    filter: blur(clamp(200px, 30vw, 400px));
+  }
+}

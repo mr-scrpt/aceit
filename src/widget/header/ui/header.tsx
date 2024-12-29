@@ -1,8 +1,8 @@
 import { FC, HTMLAttributes } from "react";
 import { Layout } from "./layout/layout";
 
-interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
+interface Header extends HTMLAttributes<HTMLDivElement> {}
 
-export const Header: FC<HeaderProps> = (props) => {
+export const Header: FC<Header> = (props) => {
   return <Layout>HEADER</Layout>;
 };
