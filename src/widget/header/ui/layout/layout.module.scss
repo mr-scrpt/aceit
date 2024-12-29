@@ -1,0 +1,5 @@
+@import "@/shared/grid/smart-grid.scss";
+
+.layout {
+  @include wrapper-full();
+}
