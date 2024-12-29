@@ -1,22 +1,23 @@
-@import "@/shared/style/grid/smart-grid.scss";
+@import "@/shared/style/grid/smart-grid";
 
 .layout {
-  @include wrapper();
+  @include wrapper;
 }
 
 .inner {
-  @include row-flex();
+  @include row-flex;
+
   align-items: center;
   padding: 30px 0;
 }
 
 .logo {
-  @include col();
+  @include col;
   @include size(2);
 }
 
 .menu {
-  @include col();
+  @include col;
   @include size(8);
   @include shift-right(2);
 

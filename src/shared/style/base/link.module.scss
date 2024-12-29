@@ -1,12 +1,10 @@
 @import "@/shared/style/mixin";
 
-.list {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-}
-
 .link {
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  color: var(--link);
   font-weight: 500;
 
   @include ts(opacity);

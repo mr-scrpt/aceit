@@ -1,6 +1,7 @@
-@import "./color.scss";
+@import "./color";
 
 :root {
   --background: var(--color-dark-950);
   --foreground: var(--color-light-0);
+  --link: var(--color-light-0);
 }

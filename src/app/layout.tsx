@@ -1,10 +1,10 @@
 import { gilroy } from "@/shared/font";
 import deco from "@/shared/style/deco.module.scss";
-import "@/shared/style/preset/globals.scss";
 import { Header } from "@/widget/header/ui/header";
 import clsx from "clsx";
 import type { Metadata } from "next";
-import layout from "./layout.module.scss";
+
+import page from "@/shared/style/fundamental/page.module.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={clsx(gilroy.className, deco.spot, layout.layout)}>
+    <html lang="en" className={page.size}>
+      <body
+        className={clsx(gilroy.className, deco.spot, page.base, page.geometri)}
+      >
         <Header></Header>
         <main>{children}</main>
       </body>
