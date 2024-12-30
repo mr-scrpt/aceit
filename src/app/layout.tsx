@@ -1,10 +1,10 @@
 import { gilroy } from "@/shared/font";
 import deco from "@/shared/style/deco.module.scss";
-import { Header } from "@/widget/header/ui/header";
 import clsx from "clsx";
 import type { Metadata } from "next";
 
 import page from "@/shared/style/fundamental/page.module.scss";
+import { Header } from "@/widget/header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={clsx(gilroy.className, deco.spot, page.base, page.geometri)}
       >
-        <Header></Header>
+        <Header />
         <main>{children}</main>
       </body>
     </html>

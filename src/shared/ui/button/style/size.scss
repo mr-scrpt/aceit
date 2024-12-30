@@ -1,0 +1,70 @@
+/* Размеры кнопок */
+
+/* S - Начало */
+.size_s {
+  height: var(--font-line-s-boost);
+  font-size: var(--font-size-s);
+  line-height: var(--font-line-s-boost);
+
+  // border-radius: 30px;
+}
+
+.size_s .text {
+  margin: 0 18px;
+}
+
+/* S - КОНЕЦ */
+
+/* M - Начало */
+.size_m {
+  height: var(--font-line-m-boost);
+
+  // font-size: 13px;
+  // line-height: 32px;
+  font-size: var(--font-size-m);
+  line-height: var(--font-line-m-boost);
+
+  // border-radius: 40px;
+}
+
+.size_m .text {
+  margin: 0 25px;
+}
+
+/* M - КОНЕЦ */
+
+/* L - Начало */
+.size_l {
+  height: var(--font-line-l-boost);
+
+  // font-size: 14px;
+  // line-height: 38px;
+  font-size: var(--font-size-l);
+  line-height: var(--font-line-l-boost);
+
+  // border-radius: 50px;
+}
+
+.size_l .text {
+  margin: 0 35px;
+}
+
+/* L - КОНЕЦ */
+
+/* XL - Начало */
+.size_xl {
+  height: var(--font-line-xl-boost);
+
+  // font-size: 16px;
+  // line-height: 44px;
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-xl-boost);
+
+  // border-radius: 60px;
+}
+
+.size_xl .text {
+  margin: 0 55px;
+}
+
+/* L - КОНЕЦ */

@@ -1,0 +1,93 @@
+import { FC, HTMLAttributes } from "react";
+
+import { Ref, forwardRef, memo } from "react";
+// import { Icon } from "@/shared/component/Icon";
+
+import { ButtonIconPositionEnum } from "../type/buttonIconPosition.enum";
+import { ButtonProps } from "../type/props.type";
+import { ButtonShapeEnum } from "../type/shape.enum";
+import { ButtonSizeEnum } from "../type/size.enum";
+import { ButtonViewEnum } from "../type/view.enum";
+import cls from "./style/Button.module.scss";
+import clsx from "clsx";
+
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  classButton?: string;
+  classIcon?: string;
+  classImg?: string;
+  view?: ButtonViewEnum;
+  size?: ButtonSizeEnum;
+  shape?: ButtonShapeEnum;
+  // icon?: IconEnum;
+  iconPosition?: ButtonIconPositionEnum;
+  img?: string;
+  alt?: string;
+}
+
+export const Button = forwardRef(
+  (props: ButtonProps, ref: Ref<ButtonProps> | null) => {
+    const {
+      className,
+      classIcon,
+      classImg,
+      children,
+      view = ButtonViewEnum.PRIMARY,
+      size = ButtonSizeEnum.L,
+      shape = ButtonShapeEnum.MAIN,
+      // icon,
+      img,
+      alt,
+      iconPosition = ButtonIconPositionEnum.LEFT,
+      // disabled,
+      ...rest
+    } = props;
+
+    const clsButton = clsx(cls.button, [className], {
+      [cls.view_primary]: view === ButtonViewEnum.PRIMARY,
+
+      [cls.view_secondary]: view === ButtonViewEnum.SECONDARY,
+      [cls.view_tertiary]: view === ButtonViewEnum.TERTIARY,
+      [cls.view_transparent]:
+        view ===
+        (ButtonViewEnum.TRANSPARENT || ButtonViewEnum.TRANSPARENT_INVERTED),
+      [cls.view_transparent_inverted]:
+        view === ButtonViewEnum.TRANSPARENT_INVERTED,
+
+      [cls.size_l]: size === ButtonSizeEnum.L,
+      [cls.size_m]: size === ButtonSizeEnum.M,
+      [cls.size_s]: size === ButtonSizeEnum.S,
+      [cls.size_xl]: size === ButtonSizeEnum.XL,
+
+      [cls.shape_main]: shape === ButtonShapeEnum.MAIN,
+      [cls.shape_next]: shape === ButtonShapeEnum.NEXT,
+      [cls.shape_flat]: shape === ButtonShapeEnum.FLAT,
+
+      // [cls.state_disabled]: disabled,
+    });
+
+    const clsText = clsx(cls.text);
+
+    const clsIconButton = clsx(cls.icon, [classIcon]);
+    const clsImgButton = clsx(cls.img, [classImg]);
+
+    return (
+      <button
+        type="button"
+        className={clsButton}
+        // disabled={disabled}
+        ref={ref}
+        {...rest}
+      >
+        {/* TODO: Maybe slot?  */}
+        {/* {icon && iconPosition === ButtonIconPositionEnum.LEFT && ( */}
+        {/*   <Icon className={clsIconButton} icon={icon} /> */}
+        {/* )} */}
+        {img && <img className={clsImgButton} src={img} alt={alt} />}
+        {children && <span className={clsText}>{children}</span>}
+        {/* {icon && iconPosition === ButtonIconPositionEnum.RIGHT && ( */}
+        {/*   <Icon className={clsIconButton} icon={icon} /> */}
+        {/* )} */}
+      </button>
+    );
+  },
+);

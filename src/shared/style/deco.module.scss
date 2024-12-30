@@ -1,5 +1,6 @@
 .spot {
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -9,7 +10,7 @@
     transform: translateX(-50%) translateY(-50%);
     background: radial-gradient(
       81.35% 81.35% at 50% 50%,
-      #ffffff 0%,
+      #fff 0%,
       #a77ebf 14%,
       #7950a3 43%,
       #8100d0 66.67%,
@@ -18,4 +19,19 @@
     z-index: -1;
     filter: blur(clamp(200px, 30vw, 400px));
   }
+}
+
+.text-gradient {
+  /* purple-gradient */
+  background: linear-gradient(
+    180deg,
+    #cd9eff 59.44%,
+    #be89f6 61.68%,
+    #9e5be3 66.51%,
+    #9344e3 72.53%,
+    #4e03e6 93.89%
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

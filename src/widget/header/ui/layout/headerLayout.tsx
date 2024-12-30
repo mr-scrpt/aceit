@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes, ReactNode } from "react";
-import sHeader from "./headerLayout.module.scss";
+import sHeaderLayout from "./headerLayout.module.scss";
 import { sLayout } from "@/shared/style";
 
 interface HeaderLayoutProps extends HTMLAttributes<HTMLDivElement> {
@@ -12,9 +12,9 @@ export const HeaderLayout: FC<HeaderLayoutProps> = (props) => {
 
   return (
     <header className={sLayout.wrapper}>
-      <div className={sHeader.inner}>
-        <div className={sHeader.logo}>{LogoSlot}</div>
-        <div className={sHeader.menu}>{MenuSlot}</div>
+      <div className={sHeaderLayout.inner}>
+        <div className={sHeaderLayout.logo}>{LogoSlot}</div>
+        <div className={sHeaderLayout.menu}>{MenuSlot}</div>
       </div>
     </header>
   );

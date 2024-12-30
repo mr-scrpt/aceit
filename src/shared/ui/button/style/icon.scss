@@ -1,0 +1,40 @@
+/* With icon */
+
+/* Ширина иконок задается от line-height размера кнопки */
+
+/* Получаме квадрат, например line-height: 32px, тогда и width: 32px */
+.icon {
+  // background-size: contain;
+  // background-size: unset;
+  // transform: scale(0.5);
+  background: var(--bg-color);
+}
+
+.button .icon + .text {
+  margin-left: 0;
+}
+
+/* Еслм иконка справа */
+.button .text:has(+ .icon) {
+  margin-right: 0;
+}
+
+.size_s .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.size_m .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.size_l .icon {
+  width: 26px;
+  height: 26px;
+}
+
+.size_xl .icon {
+  width: 32px;
+  height: 32px;
+}
