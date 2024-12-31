@@ -5,11 +5,11 @@
   --font-line-xl-boost: 50px;
   --font-size-s: 12px;
   --font-size-m: 13px;
-  --font-size-l: 14px;
+  --font-size-l: 18px;
   --font-size-xl: 16px;
   --font-line-s: 32px;
   --font-line-m: 38px;
-  --font-line-l: 44px;
+  --font-line-l: 18px;
   --font-line-xl: 50px;
 }
 
@@ -56,12 +56,10 @@
   // line-height: 38px;
   font-size: var(--font-size-l);
   line-height: var(--font-line-l-boost);
-
-  // border-radius: 50px;
 }
 
 .size_l .text {
-  margin: 0 35px;
+  margin: 0 30px;
 }
 
 /* L - КОНЕЦ */

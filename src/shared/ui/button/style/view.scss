@@ -1,23 +1,96 @@
 @import "@/shared/style/index";
 
-/* View */
 .view_primary {
-  @include mixin-ts(background-position-x);
+  @include mixin-ts(background);
 
-  background: orange;
-  background-position-x: 50%;
-  background-size: 150%;
+  background: var(--button-primary-background);
+  box-shadow: var(--button-primary-border-glow);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    @include mixin-ts(opacity);
+
+    inset: 0;
+    background: var(--button-primary-background-hover);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 
   & .text {
-    color: red;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    color: var(--text-light);
+
+    /* letter-spacing: 0.1em; */
   }
 
-  &:hover {
-    background-position-x: 0%;
+  .icon {
+    background-color: red;
+
+    &:hover {
+      background-color: green;
+    }
   }
 }
+
+/* View */
+
+/* .view_primary { */
+
+/*   @include mixin-ts(background-position-x); */
+
+/*  */
+
+/*   background: var(--button-primary-background); */
+
+/*   background-position-x: 50%; */
+
+/*   background-size: 150%; */
+
+/*  */
+
+/*   & .text { */
+
+/*     color: var(--text-light); */
+
+/*     text-transform: uppercase; */
+
+/*     letter-spacing: 0.1em; */
+
+/*   } */
+
+/*  */
+
+/*   &:hover { */
+
+/*     background-position-x: 0%; */
+
+/*  */
+
+/*     .icon { */
+
+/*       background-color: green; */
+
+/*     } */
+
+/*   } */
+
+/*  */
+
+/*   .icon { */
+
+/*     background-color: red; */
+
+/*   } */
+
+/* } */
 
 .view_secondary {
   @include mixin-ts(background-position-x);

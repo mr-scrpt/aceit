@@ -3,8 +3,11 @@
   user-select: none;
   position: relative;
   display: inline-flex;
-
-  // flex-wrap: wrap;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
   align-items: center;
   justify-content: center;
   margin: 0;

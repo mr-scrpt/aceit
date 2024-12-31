@@ -3,6 +3,10 @@
 :root {
   --background: var(--color-dark-950);
   --foreground: var(--color-light-0);
+  --text-light: var(--color-light-0);
   --link: var(--color-light-0);
-  --button-primary-content: var(--color-accent-500);
+  --button-primary-background: var(--gradient-purple-primary);
+  --button-primary-background-hover: var(--gradient-purple-secondary);
+  --button-primary-border-glow: var(--shadow-purple-glow),
+    var(--shadow-purple-border);
 }
