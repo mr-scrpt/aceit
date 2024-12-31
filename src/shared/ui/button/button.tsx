@@ -1,39 +1,39 @@
-import { FC, HTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
 
-import { Ref, forwardRef, memo } from "react";
+import { forwardRef } from "react";
 // import { Icon } from "@/shared/component/Icon";
 
-import { ButtonIconPositionEnum } from "../type/buttonIconPosition.enum";
-import { ButtonProps } from "../type/props.type";
-import { ButtonShapeEnum } from "../type/shape.enum";
-import { ButtonSizeEnum } from "../type/size.enum";
-import { ButtonViewEnum } from "../type/view.enum";
-import cls from "./style/Button.module.scss";
 import clsx from "clsx";
+import { CLASS_MAPS } from "./class.map";
+import cls from "./style/button.module.scss";
+import { ButtonIconPositionEnum } from "./type/buttonIconPosition.enum";
+import { ButtonShapeType } from "./type/shape.enum";
+import { ButtonSizeType } from "./type/size.enum";
+import { ButtonViewType } from "./type/view.enum";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   classButton?: string;
   classIcon?: string;
   classImg?: string;
-  view?: ButtonViewEnum;
-  size?: ButtonSizeEnum;
-  shape?: ButtonShapeEnum;
+  view?: ButtonViewType;
+  size?: ButtonSizeType;
+  shape?: ButtonShapeType;
   // icon?: IconEnum;
   iconPosition?: ButtonIconPositionEnum;
   img?: string;
   alt?: string;
 }
 
-export const Button = forwardRef(
-  (props: ButtonProps, ref: Ref<ButtonProps> | null) => {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (props, ref) => {
     const {
       className,
       classIcon,
       classImg,
       children,
-      view = ButtonViewEnum.PRIMARY,
-      size = ButtonSizeEnum.L,
-      shape = ButtonShapeEnum.MAIN,
+      view = "PRIMARY",
+      size = "L",
+      shape = "MAIN",
       // icon,
       img,
       alt,
@@ -43,31 +43,14 @@ export const Button = forwardRef(
     } = props;
 
     const clsButton = clsx(cls.button, [className], {
-      [cls.view_primary]: view === ButtonViewEnum.PRIMARY,
-
-      [cls.view_secondary]: view === ButtonViewEnum.SECONDARY,
-      [cls.view_tertiary]: view === ButtonViewEnum.TERTIARY,
-      [cls.view_transparent]:
-        view ===
-        (ButtonViewEnum.TRANSPARENT || ButtonViewEnum.TRANSPARENT_INVERTED),
-      [cls.view_transparent_inverted]:
-        view === ButtonViewEnum.TRANSPARENT_INVERTED,
-
-      [cls.size_l]: size === ButtonSizeEnum.L,
-      [cls.size_m]: size === ButtonSizeEnum.M,
-      [cls.size_s]: size === ButtonSizeEnum.S,
-      [cls.size_xl]: size === ButtonSizeEnum.XL,
-
-      [cls.shape_main]: shape === ButtonShapeEnum.MAIN,
-      [cls.shape_next]: shape === ButtonShapeEnum.NEXT,
-      [cls.shape_flat]: shape === ButtonShapeEnum.FLAT,
-
-      // [cls.state_disabled]: disabled,
+      [CLASS_MAPS.size[size]]: true,
+      [CLASS_MAPS.shape[shape]]: true,
+      [CLASS_MAPS.view[view]]: true,
     });
 
     const clsText = clsx(cls.text);
 
-    const clsIconButton = clsx(cls.icon, [classIcon]);
+    // const clsIconButton = clsx(cls.icon, [classIcon]);
     const clsImgButton = clsx(cls.img, [classImg]);
 
     return (
