@@ -4,12 +4,14 @@ import { forwardRef } from "react";
 // import { Icon } from "@/shared/component/Icon";
 
 import clsx from "clsx";
-import { CLASS_MAPS } from "./class.map";
+import { CLASS_MAPS } from "./style/button.map";
 import cls from "./style/button.module.scss";
-import { ButtonIconPositionEnum } from "./type/buttonIconPosition.enum";
-import { ButtonShapeType } from "./type/shape.enum";
-import { ButtonSizeType } from "./type/size.enum";
-import { ButtonViewType } from "./type/view.enum";
+import { ButtonShapeType } from "./domain/shape.type";
+import { ButtonSizeType } from "./domain/size.type";
+import { ButtonViewType } from "./domain/view.type";
+import { IconListType } from "../icon/domain/icon.type";
+import { Icon } from "../icon/icon";
+import { ButtonIconPositionType } from "./domain/position.type";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   classButton?: string;
@@ -18,8 +20,8 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   view?: ButtonViewType;
   size?: ButtonSizeType;
   shape?: ButtonShapeType;
-  // icon?: IconEnum;
-  iconPosition?: ButtonIconPositionEnum;
+  icon?: IconListType;
+  iconPosition?: ButtonIconPositionType;
   img?: string;
   alt?: string;
 }
@@ -34,10 +36,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       view = "PRIMARY",
       size = "L",
       shape = "MAIN",
-      // icon,
+      icon,
       img,
       alt,
-      iconPosition = ButtonIconPositionEnum.LEFT,
+      iconPosition = "RIGHT",
       // disabled,
       ...rest
     } = props;
@@ -50,7 +52,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const clsText = clsx(cls.text);
 
-    // const clsIconButton = clsx(cls.icon, [classIcon]);
+    const clsIconButton = clsx(cls.icon, [classIcon]);
     const clsImgButton = clsx(cls.img, [classImg]);
 
     return (
@@ -62,14 +64,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...rest}
       >
         {/* TODO: Maybe slot?  */}
-        {/* {icon && iconPosition === ButtonIconPositionEnum.LEFT && ( */}
-        {/*   <Icon className={clsIconButton} icon={icon} /> */}
-        {/* )} */}
+        {icon && iconPosition === BUTTON_ICON_POSITION.LEFT && (
+          <Icon className={clsIconButton} icon={icon} />
+        )}
         {img && <img className={clsImgButton} src={img} alt={alt} />}
         {children && <span className={clsText}>{children}</span>}
-        {/* {icon && iconPosition === ButtonIconPositionEnum.RIGHT && ( */}
-        {/*   <Icon className={clsIconButton} icon={icon} /> */}
-        {/* )} */}
+        {icon && iconPosition === ButtonIconPositionEnum.RIGHT && (
+          <Icon className={clsIconButton} icon={icon} />
+        )}
       </button>
     );
   },

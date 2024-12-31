@@ -1,0 +1,27 @@
+.icon {
+  display: inline-block;
+  min-width: 0.5em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  mask-position: 50%;
+  mask-position: 50%;
+  mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-size: contain;
+}
+
+.icon:empty::after {
+  content: "\00A0";
+  visibility: hidden;
+}
+
+.icon > img,
+.icon > svg {
+  margin: -5.15em 0 -5em;
+  vertical-align: middle;
+}

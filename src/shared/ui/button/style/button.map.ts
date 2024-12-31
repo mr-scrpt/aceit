@@ -1,4 +1,4 @@
-import cls from "./style/button.module.scss";
+import cls from "../style/button.module.scss";
 
 export const CLASS_MAPS = {
   size: {
@@ -10,9 +10,7 @@ export const CLASS_MAPS = {
   view: {
     PRIMARY: cls.view_primary,
     SECONDARY: cls.view_secondary,
-    // TERTIARY: cls.view_tertiary,
     TRANSPARENT: cls.view_transparent,
-    // TRANSPARENT_INVERTED: cls.view_transparent_inverted,
   },
   shape: {
     MAIN: cls.shape_main,

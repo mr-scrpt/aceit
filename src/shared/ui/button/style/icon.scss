@@ -7,7 +7,8 @@
   // background-size: contain;
   // background-size: unset;
   // transform: scale(0.5);
-  background: pink;
+
+  /* background: pink; */
 }
 
 .button .icon + .text {
@@ -37,4 +38,9 @@
 .size_xl .icon {
   width: 32px;
   height: 32px;
+}
+
+// VIWE
+.view_primary .icon {
+  background: yellow;
 }
