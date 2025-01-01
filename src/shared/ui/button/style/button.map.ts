@@ -14,7 +14,7 @@ export const CLASS_MAPS = {
   },
   shape: {
     MAIN: cls.shape_main,
-    NEXT: cls.shape_next,
+    ROUNDY: cls.shape_roundy,
     FLAT: cls.shape_flat,
   },
 } as const;

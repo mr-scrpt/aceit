@@ -1,6 +1,6 @@
 export const BUTTON_SHAPE = {
   MAIN: "shape_main",
-  NEXT: "shape_next",
+  ROUNDY: "shape_roundy",
   FLAT: "shape_flat",
 } as const;
 

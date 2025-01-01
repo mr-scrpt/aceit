@@ -1,5 +1,7 @@
 @import "@/shared/style/index";
 
+/* View */
+
 .view_primary {
   @include mixin-ts(background);
 
@@ -7,7 +9,8 @@
   box-shadow: var(--button-primary-border-glow);
   position: relative;
   isolation: isolate;
-  overflow: hidden;
+
+  /* overflow: hidden; */
 
   &::before {
     content: "";
@@ -15,6 +18,7 @@
 
     @include mixin-ts(opacity);
 
+    border-radius: inherit;
     inset: 0;
     background: var(--button-primary-background-hover);
     opacity: 0;
@@ -26,9 +30,9 @@
   }
 
   & .text {
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
     color: var(--text-light);
-
-    /* letter-spacing: 0.1em; */
   }
 
   .icon {
@@ -39,58 +43,6 @@
     }
   }
 }
-
-/* View */
-
-/* .view_primary { */
-
-/*   @include mixin-ts(background-position-x); */
-
-/*  */
-
-/*   background: var(--button-primary-background); */
-
-/*   background-position-x: 50%; */
-
-/*   background-size: 150%; */
-
-/*  */
-
-/*   & .text { */
-
-/*     color: var(--text-light); */
-
-/*     text-transform: uppercase; */
-
-/*     letter-spacing: 0.1em; */
-
-/*   } */
-
-/*  */
-
-/*   &:hover { */
-
-/*     background-position-x: 0%; */
-
-/*  */
-
-/*     .icon { */
-
-/*       background-color: green; */
-
-/*     } */
-
-/*   } */
-
-/*  */
-
-/*   .icon { */
-
-/*     background-color: red; */
-
-/*   } */
-
-/* } */
 
 .view_secondary {
   @include mixin-ts(background-position-x);
@@ -143,28 +95,46 @@
   @include mixin-ts(background);
 
   background: transparent;
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    box-shadow: var(--button-transparent-border);
+
+    @include mixin-ts(opacity);
+
+    border-radius: inherit;
+    inset: 0;
+    background: var(--button-transparent-background-hover);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:hover .icon {
+    background-color: var(--button-transparent-text-hover);
+  }
+
+  &:hover .text {
+    color: var(--button-transparent-text-hover);
+  }
 
   & .text {
     @include mixin-ts(color);
 
-    color: blue;
+    color: var(--button-transparent-text);
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
   }
 
-  &:hover {
-    background: red;
+  .icon {
+    @include mixin-ts(background-color);
 
-    & .text {
-    }
-  }
-
-  &_inverted {
-    &:hover {
-      // border-color: var(--color-primary-inverted);
-      background: violet;
-    }
-
-    & .text {
-      color: coral;
-    }
+    background-color: var(--button-transparent-text);
   }
 }

@@ -1,7 +1,7 @@
 :root {
   --font-line-s-boost: 32px;
   --font-line-m-boost: 38px;
-  --font-line-l-boost: 44px;
+  --font-line-l-boost: 56px;
   --font-line-xl-boost: 50px;
   --font-size-s: 12px;
   --font-size-m: 13px;
@@ -51,15 +51,12 @@
 /* L - Начало */
 .size_l {
   height: var(--font-line-l-boost);
-
-  // font-size: 14px;
-  // line-height: 38px;
   font-size: var(--font-size-l);
   line-height: var(--font-line-l-boost);
 }
 
 .size_l .text {
-  margin: 0 30px;
+  margin: 0 28px;
 }
 
 /* L - КОНЕЦ */
@@ -67,9 +64,6 @@
 /* XL - Начало */
 .size_xl {
   height: var(--font-line-xl-boost);
-
-  // font-size: 16px;
-  // line-height: 44px;
   font-size: var(--font-size-xl);
   line-height: var(--font-line-xl-boost);
 

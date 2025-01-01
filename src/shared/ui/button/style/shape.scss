@@ -74,7 +74,7 @@
   }
 }
 
-.shape_next {
+.shape_roundy {
   // Размеры
   &.size_s {
     border-radius: 2px;
@@ -134,8 +134,8 @@
   }
 
   &.size_l .icon:not(:has(+ .text)) {
-    margin-right: 7.5px;
-    margin-left: 7.5px;
+    margin-right: 28px;
+    margin-left: 10px;
   }
 
   &.size_xl .icon:has(+ .text) {

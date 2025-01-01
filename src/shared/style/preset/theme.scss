@@ -5,8 +5,19 @@
   --foreground: var(--color-light-0);
   --text-light: var(--color-light-0);
   --link: var(--color-light-0);
+
+  /* button */
+  // primary
   --button-primary-background: var(--gradient-purple-primary);
   --button-primary-background-hover: var(--gradient-purple-secondary);
+  --button-primary-border: var(--shadow-purple-border);
   --button-primary-border-glow: var(--shadow-purple-glow),
     var(--shadow-purple-border);
+
+  // transparent
+  --button-transparent-text: var(--color-accent-400);
+  --button-transparent-text-hover: var(--color-light-0);
+  --button-transparent-background: transparent;
+  --button-transparent-background-hover: var(--color-accent-800);
+  --button-transparent-border: var(--shadow-purple-border);
 }
