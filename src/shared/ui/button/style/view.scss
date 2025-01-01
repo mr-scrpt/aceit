@@ -34,59 +34,54 @@
     text-transform: capitalize;
     color: var(--text-light);
   }
-
-  .icon {
-    background-color: red;
-
-    &:hover {
-      background-color: green;
-    }
-  }
 }
 
-.view_secondary {
-  @include mixin-ts(background-position-x);
-
-  background: seagreen;
-  background-position-x: 50%;
-  background-size: 150%;
-
-  // border: 1px solid transparent;
-  // background: $color_light;
-
+.view_icon {
   & .text {
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-
-    // color: $color_primary;
   }
 
-  &:hover {
-    background-position-x: 0%;
-
-    // border-color: $color_secondary;
-  }
-}
-
-.view_tertiary {
-  // background: var(--color-bg-inverted);
-  background: red;
-  border: 2px solid navajowhite;
-
-  & .text {
-    @include mixin-ts(color);
-
-    color: navajowhite;
+  & i {
+    isolation: isolate;
+    position: relative;
+    display: flex;
+    background: var(--button-icon-box-background);
+    box-shadow: var(--shadow-purple-border);
+    border-radius: 8px;
   }
 
-  &:hover {
-    background: blue;
+  & i::before {
+    @include mixin-ts(opacity);
 
-    & .text {
-      @include mixin-ts(color);
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 0;
+    background: var(--button-icon-box-background-hover);
+    opacity: 0;
+    z-index: -1;
+  }
 
-      color: yellow;
+  &:hover i::before {
+    opacity: 1;
+  }
+
+  .icon {
+    @include mixin-ts(background-color);
+
+    background-color: var(--button-icon-text);
+    position: relative;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+      content: "";
+      position: absolute;
+      border-radius: inherit;
+      color: white;
+      z-index: 1;
     }
   }
 }

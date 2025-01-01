@@ -20,4 +20,13 @@
   --button-transparent-background: transparent;
   --button-transparent-background-hover: var(--color-accent-800);
   --button-transparent-border: var(--shadow-purple-border);
+
+  // icon
+  --button-icon-text: var(--color-light-0);
+  --button-icon-background: transparent;
+  --button-icon-border: var(--shadow-purple-border);
+
+  // > icon box
+  --button-icon-box-background: var(--gradient-purple-tertiary);
+  --button-icon-box-background-hover: var(--gradient-purple-secondary);
 }

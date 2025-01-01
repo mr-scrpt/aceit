@@ -1,7 +1,6 @@
 export const BUTTON_VIEW = {
   PRIMARY: "primary",
-  SECONDARY: "secondary",
-  // TERTIARY: "tertiary",
+  ICON: "icon",
   TRANSPARENT: "transparent",
   // TRANSPARENT_INVERTED: "transparent_inverted",
 } as const;

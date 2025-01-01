@@ -10,7 +10,7 @@ export const ButtonKit: FC<ButtonKitProps> = (props) => {
     <div>
       <div className={cls.inner}>
         <div className={cls.box}>
-          <div className={cls.title}>Primary</div>
+          <div className={cls.title}>View Primary</div>
           <div className={cls.row}>
             <Button view="PRIMARY" size="S">
               Button
@@ -27,7 +27,7 @@ export const ButtonKit: FC<ButtonKitProps> = (props) => {
           </div>
         </div>
         <div className={cls.box}>
-          <div className={cls.title}>Primary - Roundy</div>
+          <div className={cls.title}>View Primary - Roundy</div>
           <div className={cls.row}>
             <Button view="PRIMARY" size="S" shape="ROUNDY">
               Button
@@ -78,7 +78,7 @@ export const ButtonKit: FC<ButtonKitProps> = (props) => {
           </div>
         </div>
         <div className={cls.box}>
-          <div className={cls.title}>Transparent - Roundy + Icon</div>
+          <div className={cls.title}>View Transparent - Roundy + Icon</div>
           <div className={cls.row}>
             <Button
               view="TRANSPARENT"
@@ -115,6 +115,49 @@ export const ButtonKit: FC<ButtonKitProps> = (props) => {
               size="XL"
               shape="ROUNDY"
               IconSlotRight={(clsIcon) => (
+                <Icon icon="ARROW_FLAT" className={clsIcon} />
+              )}
+            >
+              Button
+            </Button>
+          </div>
+        </div>
+        <div className={cls.box}>
+          <div className={cls.title}>View Icon</div>
+          <div className={cls.row}>
+            <Button
+              view="ICON"
+              size="S"
+              IconSlotLeft={(clsIcon) => (
+                <Icon icon="ARROW_FLAT" className={clsIcon} />
+              )}
+            >
+              Button
+            </Button>
+            <Button
+              view="ICON"
+              size="M"
+              IconSlotLeft={(clsIcon) => (
+                <Icon icon="ARROW_FLAT" className={clsIcon} />
+              )}
+            >
+              Button
+            </Button>
+            <Button
+              view="ICON"
+              size="L"
+              IconSlotLeft={(clsIcon) => (
+                <i>
+                  <Icon icon="ARROW_FLAT" className={clsIcon} />
+                </i>
+              )}
+            >
+              Button
+            </Button>
+            <Button
+              view="ICON"
+              size="XL"
+              IconSlotLeft={(clsIcon) => (
                 <Icon icon="ARROW_FLAT" className={clsIcon} />
               )}
             >

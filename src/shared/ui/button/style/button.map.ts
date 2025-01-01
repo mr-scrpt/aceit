@@ -9,7 +9,7 @@ export const CLASS_MAPS = {
   },
   view: {
     PRIMARY: cls.view_primary,
-    SECONDARY: cls.view_secondary,
+    ICON: cls.view_icon,
     TRANSPARENT: cls.view_transparent,
   },
   shape: {
