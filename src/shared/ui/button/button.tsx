@@ -7,7 +7,7 @@ import clsx from "clsx";
 import { ButtonShapeType } from "./domain/shape.type";
 import { ButtonSizeType } from "./domain/size.type";
 import { ButtonViewType } from "./domain/view.type";
-import { CLASS_MAPS } from "./style/button.map";
+import { BUTTON_TO_CLASS } from "./style/button.map";
 import cls from "./style/button.module.scss";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
@@ -17,7 +17,6 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   view?: ButtonViewType;
   size?: ButtonSizeType;
   shape?: ButtonShapeType;
-  // IconSlot?: ReactNode;
   IconSlotLeft?: (className: string) => ReactNode;
   IconSlotRight?: (className: string) => ReactNode;
   img?: string;
@@ -42,9 +41,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     } = props;
 
     const clsButton = clsx(cls.button, [className], {
-      [CLASS_MAPS.size[size]]: true,
-      [CLASS_MAPS.shape[shape]]: true,
-      [CLASS_MAPS.view[view]]: true,
+      [BUTTON_TO_CLASS.size[size]]: true,
+      [BUTTON_TO_CLASS.shape[shape]]: true,
+      [BUTTON_TO_CLASS.view[view]]: true,
     });
 
     const clsText = clsx(cls.text);

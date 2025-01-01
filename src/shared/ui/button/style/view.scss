@@ -36,56 +36,6 @@
   }
 }
 
-.view_icon {
-  & .text {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  & i {
-    isolation: isolate;
-    position: relative;
-    display: flex;
-    background: var(--button-icon-box-background);
-    box-shadow: var(--shadow-purple-border);
-    border-radius: 8px;
-  }
-
-  & i::before {
-    @include mixin-ts(opacity);
-
-    content: "";
-    position: absolute;
-    border-radius: inherit;
-    inset: 0;
-    background: var(--button-icon-box-background-hover);
-    opacity: 0;
-    z-index: -1;
-  }
-
-  &:hover i::before {
-    opacity: 1;
-  }
-
-  .icon {
-    @include mixin-ts(background-color);
-
-    background-color: var(--button-icon-text);
-    position: relative;
-
-    &::before {
-      width: 50px;
-      height: 50px;
-      content: "";
-      position: absolute;
-      border-radius: inherit;
-      color: white;
-      z-index: 1;
-    }
-  }
-}
-
 .view_transparent {
   @include mixin-ts(background);
 

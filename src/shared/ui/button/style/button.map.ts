@@ -1,6 +1,6 @@
 import cls from "../style/button.module.scss";
 
-export const CLASS_MAPS = {
+export const BUTTON_TO_CLASS = {
   size: {
     S: cls.size_s,
     M: cls.size_m,
@@ -9,7 +9,6 @@ export const CLASS_MAPS = {
   },
   view: {
     PRIMARY: cls.view_primary,
-    ICON: cls.view_icon,
     TRANSPARENT: cls.view_transparent,
   },
   shape: {
