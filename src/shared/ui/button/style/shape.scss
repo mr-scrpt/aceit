@@ -72,6 +72,55 @@
   &.size_xl .icon:not(:has(+ .text)) {
     margin: 9px;
   }
+
+  /* IconBox */
+  &.size_s .icon_box .icon:has(+ .text) {
+    margin: auto;
+  }
+
+  &.size_s .icon_box .text + .icon {
+    margin: auto;
+  }
+
+  &.size_s .icon_box .icon:not(:has(+ .text)) {
+    margin: auto;
+  }
+
+  &.size_m .icon_box .icon:has(+ .text) {
+    margin: auto;
+  }
+
+  &.size_m .icon_box .text + .icon {
+    margin: auto;
+  }
+
+  &.size_m .icon_box .icon:not(:has(+ .text)) {
+    margin: auto;
+  }
+
+  &.size_l .icon_box .icon:has(+ .text) {
+    margin: auto;
+  }
+
+  &.size_l .icon_box .text + .icon {
+    margin: auto;
+  }
+
+  &.size_l .icon_box .icon:not(:has(+ .text)) {
+    margin: auto;
+  }
+
+  &.size_xl .icon_box .icon:has(+ .text) {
+    margin: auto;
+  }
+
+  &.size_xl .icon_box .text + .icon {
+    margin: auto;
+  }
+
+  &.size_xl .icon_box .icon:not(:has(+ .text)) {
+    margin: auto;
+  }
 }
 
 .shape_roundy {
@@ -151,5 +200,54 @@
   &.size_xl .icon:not(:has(+ .text)) {
     margin-right: 9px;
     margin-left: 9px;
+  }
+
+  /* IconBox */
+  &.size_s .icon_box .icon:has(+ .text) {
+    margin: auto;
+  }
+
+  &.size_s .icon_box .text + .icon {
+    margin: auto;
+  }
+
+  &.size_s .icon_box .icon:not(:has(+ .text)) {
+    margin: auto;
+  }
+
+  &.size_m .icon_box .icon:has(+ .text) {
+    margin: auto;
+  }
+
+  &.size_m .icon_box .text + .icon {
+    margin: auto;
+  }
+
+  &.size_m .icon_box .icon:not(:has(+ .text)) {
+    margin: auto;
+  }
+
+  &.size_l .icon_box .icon:has(+ .text) {
+    margin: auto;
+  }
+
+  &.size_l .icon_box .text + .icon {
+    margin: auto;
+  }
+
+  &.size_l .icon_box .icon:not(:has(+ .text)) {
+    margin: auto;
+  }
+
+  &.size_xl .icon_box .icon:has(+ .text) {
+    margin: auto;
+  }
+
+  &.size_xl .icon_box .text + .icon {
+    margin: auto;
+  }
+
+  &.size_xl .icon_box .icon:not(:has(+ .text)) {
+    margin: auto;
   }
 }

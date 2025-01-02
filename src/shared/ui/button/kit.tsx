@@ -2,7 +2,8 @@ import { FC, HTMLAttributes } from "react";
 import { Button } from "./button";
 import cls from "../button/style/kit.module.scss";
 import { Icon } from "../icon/ui/icon";
-import { IconBox } from "../icon/ui/iconBox";
+import { LinkProject } from "../link/ui/link";
+import { ButtonWithIconBox } from "./buttonWithIconBox";
 
 interface ButtonKitProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -126,7 +127,31 @@ export const ButtonKit: FC<ButtonKitProps> = (props) => {
         <div className={cls.box}>
           <div className={cls.title}>Link Icon Box</div>
           <div className={cls.row}>
-            <IconBox icon="ARROW_FLAT" size="L" />
+            {/* <IconBox icon="ARROW_FLAT" size="L" /> */}
+            {/* <LinkProject */}
+            {/*   href="#" */}
+            {/*   IconSlotLeft={(clsIconBox) => ( */}
+            {/*     <IconBox icon="ARROW_FLAT" size="L" classBox={clsIconBox} /> */}
+            {/*   )} */}
+            {/* > */}
+            {/*   Link */}
+            {/* </LinkProject> */}
+            <ButtonWithIconBox
+              view="WITH_ICON"
+              size="L"
+              shape="ROUNDY"
+              IconSlot={(cls) => <Icon icon="ARROW_FLAT" className={cls} />}
+            >
+              Button
+            </ButtonWithIconBox>
+            <ButtonWithIconBox
+              view="WITH_ICON"
+              size="M"
+              shape="ROUNDY"
+              IconSlot={(cls) => <Icon icon="ARROW_FLAT" className={cls} />}
+            >
+              Button
+            </ButtonWithIconBox>
           </div>
         </div>
       </div>

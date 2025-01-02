@@ -75,11 +75,18 @@
     color: var(--button-transparent-text);
     letter-spacing: 0.04em;
     text-transform: capitalize;
+    font-weight: 500;
   }
 
   .icon {
     @include mixin-ts(background-color);
 
     background-color: var(--button-transparent-text);
+  }
+}
+
+.button.view_with_icon {
+  .text {
+    font-weight: 500;
   }
 }

@@ -1,0 +1,64 @@
+/* With icon */
+
+/* Ширина иконок задается от line-height размера кнопки */
+
+/* Получаме квадрат, например line-height: 32px, тогда и width: 32px */
+.icon_box {
+  isolation: isolate;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--button-icon-box-background);
+  box-shadow: var(--shadow-purple-border);
+  border-radius: 8px;
+
+  &::before {
+    @include mixin-ts(opacity);
+
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 0;
+    background: var(--button-icon-box-background-hover);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .button:hover &::before {
+    opacity: 1;
+  }
+
+  .icon {
+    background-color: var(--button-icon-text);
+  }
+}
+
+/* .button .icon_box + .text { */
+
+/*   margin-left: 0; */
+
+/* } */
+
+/* Еслм иконка справа */
+.button .text:has(+ .icon) {
+  margin-right: 0;
+}
+
+.size_m .icon_box {
+  width: 36px;
+  height: 36px;
+}
+
+.size_l .icon_box {
+  width: 48px;
+  height: 48px;
+}
+
+// VIWE
+
+/* .view_primary .icon { */
+
+/*   background: red; */
+
+/* } */

@@ -49,6 +49,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const clsText = clsx(cls.text);
 
     const clsIconButton = clsx(cls.icon, [classIcon]);
+    const clsIconBoxButton = clsx(cls.icon, [classIcon]);
 
     return (
       <button

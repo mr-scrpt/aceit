@@ -10,6 +10,7 @@ export const BUTTON_TO_CLASS = {
   view: {
     PRIMARY: cls.view_primary,
     TRANSPARENT: cls.view_transparent,
+    WITH_ICON: cls.view_with_icon,
   },
   shape: {
     MAIN: cls.shape_main,

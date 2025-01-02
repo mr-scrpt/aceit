@@ -1,7 +1,7 @@
 export const BUTTON_VIEW = {
   PRIMARY: "primary",
   TRANSPARENT: "transparent",
-  // TRANSPARENT_INVERTED: "transparent_inverted",
+  WITH_ICON: "with_icon",
 } as const;
 
 export type ButtonViewType = keyof typeof BUTTON_VIEW;
