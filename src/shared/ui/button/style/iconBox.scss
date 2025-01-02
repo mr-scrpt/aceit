@@ -29,6 +29,10 @@
     opacity: 1;
   }
 
+  .button:hover & {
+    box-shadow: var(--button-primary-border-glow);
+  }
+
   .icon {
     background-color: var(--button-icon-text);
   }
