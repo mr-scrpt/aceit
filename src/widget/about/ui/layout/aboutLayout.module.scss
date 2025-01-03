@@ -17,7 +17,8 @@
 
 .text {
   @include col;
-  @include size(5);
+  @include size(12);
+  @include size-bp994(5);
 
   background: red;
   text-align: center;
@@ -25,7 +26,8 @@
 
 .people {
   @include col;
-  @include size(7);
+  @include size(12);
+  @include size-bp994(7);
 
   background: blue;
   text-align: center;
@@ -33,7 +35,8 @@
 
 .work {
   @include col;
-  @include size(5);
+  @include size(12);
+  @include size-bp994(5);
 
   background: green;
   text-align: center;
@@ -41,7 +44,8 @@
 
 .snack {
   @include col;
-  @include size(3);
+  @include size(12);
+  @include size-bp994(3);
 
   background: yellow;
   text-align: center;
@@ -49,7 +53,8 @@
 
 .sport {
   @include col;
-  @include size(4);
+  @include size(12);
+  @include size-bp994(4);
 
   background: orange;
   text-align: center;
@@ -57,7 +62,8 @@
 
 .office {
   @include col;
-  @include size(7);
+  @include size(12);
+  @include size-bp994(7);
 
   background: purple;
   text-align: center;
@@ -65,7 +71,8 @@
 
 .course {
   @include col;
-  @include size(5);
+  @include size(12);
+  @include size-bp994(5);
 
   background: gray;
   text-align: center;
