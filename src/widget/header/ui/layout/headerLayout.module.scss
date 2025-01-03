@@ -9,14 +9,28 @@
 
 .logo {
   @include col;
-  @include size(2);
+  @include size(12);
+
+  display: flex;
+  justify-content: center;
+
+  @include bp768-block {
+    @include size(2);
+
+    justify-content: flex-start;
+  }
 }
 
 .menu {
   @include col;
-  @include size(8);
-  @include shift-right(2);
 
-  display: flex;
-  justify-content: center;
+  display: none;
+
+  @include bp768-block {
+    display: flex;
+    justify-content: center;
+
+    @include size(8);
+    @include shift-right(2);
+  }
 }

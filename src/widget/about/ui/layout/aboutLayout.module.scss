@@ -1,0 +1,72 @@
+@import "@/shared/style/grid/smart-grid";
+
+.inner {
+  /*  */
+
+  /* align-items: center; */
+
+  /* padding: 30px 0; */
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  @include row-flex;
+}
+
+.text {
+  @include col;
+  @include size(5);
+
+  background: red;
+  text-align: center;
+}
+
+.people {
+  @include col;
+  @include size(7);
+
+  background: blue;
+  text-align: center;
+}
+
+.work {
+  @include col;
+  @include size(5);
+
+  background: green;
+  text-align: center;
+}
+
+.snack {
+  @include col;
+  @include size(3);
+
+  background: yellow;
+  text-align: center;
+}
+
+.sport {
+  @include col;
+  @include size(4);
+
+  background: orange;
+  text-align: center;
+}
+
+.office {
+  @include col;
+  @include size(7);
+
+  background: purple;
+  text-align: center;
+}
+
+.course {
+  @include col;
+  @include size(5);
+
+  background: gray;
+  text-align: center;
+}
