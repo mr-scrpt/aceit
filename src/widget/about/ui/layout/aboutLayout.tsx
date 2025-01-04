@@ -51,16 +51,46 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
           >
             {WorkSlot}
           </div>
-          <div className={clsx(sAboutLayout.snack, sPage.card)}>
+          <div
+            className={clsx(
+              sAboutLayout.snack,
+              sPage.card,
+              sDeco.sectionGradientFillAndSpot,
+              sDeco.sectionGradientBorder,
+            )}
+          >
             {SnackSlot}
           </div>
-          <div className={clsx(sAboutLayout.sport, sPage.card)}>
+          <div
+            className={clsx(
+              sAboutLayout.sport,
+              sPage.card,
+              sDeco.sectionGradientPrimary,
+              sDeco.sectionGradientBorder,
+            )}
+          >
             {SportSlot}
           </div>
         </div>
         <div className={sAboutLayout.row}>
-          <div className={clsx(sAboutLayout.office, sPage.card)}>Office</div>
-          <div className={clsx(sAboutLayout.course, sPage.card)}>
+          <div
+            className={clsx(
+              sAboutLayout.office,
+              sPage.card,
+              sDeco.sectionGradientPrimary,
+              sDeco.sectionGradientBorder,
+            )}
+          >
+            Office
+          </div>
+          <div
+            className={clsx(
+              sAboutLayout.course,
+              sPage.card,
+              sDeco.sectionGradientPrimary,
+              sDeco.sectionGradientBorder,
+            )}
+          >
             {CourseSlot}
           </div>
         </div>

@@ -47,8 +47,9 @@
   @include size(12);
   @include size-bp994(3);
 
-  background: yellow;
-  text-align: center;
+  /* background: yellow; */
+
+  /* text-align: center; */
 }
 
 .sport {
@@ -56,7 +57,7 @@
   @include size(12);
   @include size-bp994(4);
 
-  background: orange;
+  /* background: orange; */
 }
 
 .office {

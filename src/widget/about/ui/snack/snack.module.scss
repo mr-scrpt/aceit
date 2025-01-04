@@ -1,0 +1,44 @@
+@import "@/shared/style/grid/smart-grid";
+
+.snack {
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include bp994-block {
+    justify-content: flex-end;
+  }
+}
+
+.description {
+  width: 100%;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 32px;
+  background: linear-gradient(
+    239.25deg,
+    #fff 27.05%,
+    rgb(255 255 255 / 50%) 72.27%,
+    rgb(255 255 255 / 0%) 117.49%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  @include bp768-block {
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
