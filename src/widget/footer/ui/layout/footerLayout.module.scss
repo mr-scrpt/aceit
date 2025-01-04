@@ -1,0 +1,43 @@
+@import "@/shared/style/grid/smart-grid";
+
+.inner {
+  @include row-flex;
+
+  align-items: center;
+}
+
+.row {
+  @include col;
+  @include size(12);
+
+  padding: 30px 0;
+  display: flex;
+
+  /* justify-content: space-between; */
+}
+
+.menu {
+  display: none;
+
+  @include bp768-block {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+}
+
+.social {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+
+  @include bp768-block {
+    justify-content: flex-end;
+  }
+}
+
+.copyright {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}

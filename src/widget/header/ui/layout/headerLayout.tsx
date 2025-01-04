@@ -1,6 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from "react";
 import sHeaderLayout from "./headerLayout.module.scss";
-import { sLayout } from "@/shared/style";
+import { sDeco, sLayout } from "@/shared/style";
+import clsx from "clsx";
 
 interface HeaderLayoutProps extends HTMLAttributes<HTMLDivElement> {
   LogoSlot: ReactNode;
@@ -12,7 +13,9 @@ export const HeaderLayout: FC<HeaderLayoutProps> = (props) => {
 
   return (
     <header className={sLayout.wrapper}>
-      <div className={sHeaderLayout.inner}>
+      <div
+        className={clsx(sHeaderLayout.inner, sDeco.sectionGradientLineGhosty)}
+      >
         <div className={sHeaderLayout.logo}>{LogoSlot}</div>
         <div className={sHeaderLayout.menu}>{MenuSlot}</div>
       </div>

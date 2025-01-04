@@ -1,6 +1,6 @@
 import { MenuItem } from "../domain/menu.type";
 
-export const HEADER_MENU: MenuItem[] = [
+export const MENU_LIST: MenuItem[] = [
   {
     id: 1,
     title: "About",
