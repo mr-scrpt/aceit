@@ -30,8 +30,10 @@
   @include size(12);
   @include size-bp994(7);
 
-  background: blue;
+  /* background: blue; */
   text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .work {
@@ -39,8 +41,9 @@
   @include size(12);
   @include size-bp994(5);
 
-  background: green;
-  text-align: center;
+  /* background: green; */
+
+  /* text-align: center; */
 }
 
 .snack {

@@ -6,7 +6,7 @@
   --text-light: var(--color-light-0);
   --link: var(--color-light-0);
 
-  /* button */
+  /* BUTTON */
   // primary
   --button-primary-background: var(--gradient-purple-primary);
   --button-primary-background-hover: var(--gradient-purple-secondary);
@@ -30,7 +30,10 @@
   --button-icon-box-background: var(--gradient-purple-tertiary);
   --button-icon-box-background-hover: var(--gradient-purple-secondary);
 
-  /* Action */
-  --action-text: var(--color-action-500);
-  --ghosty-text: var(--color-light-100);
+  /* TEXT */
+  --text-action: var(--color-action-500);
+  --text-ghosty: var(--color-light-100);
+  --text-gradient-primary: var(--gradient-purple-quaternary);
+  --text-gradient-ghosty: var(--gradient-light-to-dark);
+  --text-gradient-radial-ghosty: var(--gradient-radial-light-to-dark);
 }

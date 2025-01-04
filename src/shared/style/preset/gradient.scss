@@ -19,4 +19,19 @@
     #37224d 89.18%,
     #9f71ff 120.51%
   );
+  --gradient-purple-quaternary: linear-gradient(
+    180deg,
+    #cd9eff 30.44%,
+    #be89f6 40.68%,
+    #9e5be3 50.51%,
+    #9344e3 60.53%,
+    #4e03e6 93.89%
+  );
+  --gradient-light-to-dark: linear-gradient(90deg, #fff 0%, #201b23 100%);
+  --gradient-radial-light-to-dark: radial-gradient(
+    108.17% 129.85% at 83.88% 124.64%,
+    rgb(67 54 77 / 20%) 0%,
+    rgb(50 40 57 / 40%) 50%,
+    rgb(27 22 30 / 0%) 100%
+  );
 }
