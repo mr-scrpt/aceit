@@ -36,6 +36,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
               sDeco.sectionGradientBorder,
             )}
           >
+            {PeopleSlot}
             <div className={sDeco.sectionGradientLeftBottom}></div>
             <div className={sDeco.sectionGradientRightTop}></div>
           </div>
@@ -70,6 +71,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
             )}
           >
             {SportSlot}
+            <div className={sDeco.sectionBackgroundImgCircle}></div>
           </div>
         </div>
         <div className={sAboutLayout.row}>
