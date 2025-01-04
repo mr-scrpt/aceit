@@ -1,3 +1,5 @@
+@import "@/shared/style/grid/smart-grid";
+
 .inner {
 }
 
@@ -6,9 +8,14 @@
   text-align: center;
 }
 
-.descr {
+.description {
   font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
-  margin-bottom: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+
+  @include bp768-block {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }

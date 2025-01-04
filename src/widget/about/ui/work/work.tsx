@@ -15,7 +15,7 @@ export const Work: FC<WorkProps> = (props) => {
       <Title size="L" className={clsx(sWork.title, sDeco.textGradientGhosty)}>
         Work Equipment
       </Title>
-      <div className={clsx(sWork.descr, sDeco.textGhosty)}>
+      <div className={clsx(sWork.description, sDeco.textGhosty)}>
         We provide you with a personal computer so that you can perform all your
         tasks and stay in touch with the team
       </div>
