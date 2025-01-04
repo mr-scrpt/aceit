@@ -12,13 +12,7 @@ export const Work: FC<WorkProps> = (props) => {
   return (
     <div className={sWork.work}>
       <div className={clsx(sWork.inner)}>
-        <Image
-          src={ImacImg}
-          alt="work"
-          width={500}
-          height={500}
-          quality={100}
-        />
+        <Image src={ImacImg} alt="work" quality={100} />
         <Title size="L" className={clsx(sWork.title, sDeco.textGradientGhosty)}>
           Work Equipment
         </Title>
