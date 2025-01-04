@@ -10,6 +10,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  padding: 30px;
 
   @include bp994-block {
     text-align: left;

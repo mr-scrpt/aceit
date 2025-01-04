@@ -3,6 +3,8 @@ import { AboutLayout } from "./layout/aboutLayout";
 import { Text } from "./text/text";
 import { Work } from "./work/work";
 import { Snack } from "./snack/snack";
+import { Sport } from "./sport/sport";
+import { Office } from "./office/office";
 
 interface AboutProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -12,6 +14,8 @@ export const About: FC<AboutProps> = (props) => {
       TextSlot={<Text />}
       WorkSlot={<Work />}
       SnackSlot={<Snack />}
+      SportSlot={<Sport />}
+      OfficeSlot={<Office />}
     />
   );
 };

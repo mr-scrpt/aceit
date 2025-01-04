@@ -29,6 +29,13 @@
   text-fill-color: transparent;
 }
 
+.textGradientSuccess {
+  background: var(--text-gradient-success);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .textGhosty {
   color: var(--text-ghosty);
   opacity: 0.8;
@@ -164,8 +171,8 @@
   height: 100%;
   left: 0;
   top: 0;
-
-  /* z-index: -1; */
+  isolation: isolate;
+  z-index: -1;
 
   &::before {
     content: "";
@@ -177,7 +184,67 @@
     background: url("./img/deco/img_circle.png") no-repeat top right;
 
     /* mix-blend-mode: screen; */
+  }
+}
 
-    /* filter: blur(50px); */
+.sectionBackgroundImgBallRightTop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  isolation: isolate;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 220px;
+    right: -80px;
+    top: -90px;
+    background: url("./img/deco/img_ball.png") no-repeat center/contain;
+    transform: rotate(75deg);
+  }
+}
+
+.sectionBackgroundImgBallRightMiddle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  isolation: isolate;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: 0;
+    bottom: 20%;
+    background: url("./img/deco/img_ball.png") no-repeat center/contain;
+    transform: rotate(35deg);
+  }
+}
+
+.sectionBackgroundImgBallLeftMiddle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  isolation: isolate;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 0;
+    bottom: 0;
+    background: url("./img/deco/img_ball.png") no-repeat center/contain;
   }
 }
