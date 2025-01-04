@@ -19,10 +19,6 @@
   @include col;
   @include size(12);
   @include size-bp994(5);
-
-  /* background: red; */
-
-  /* text-align: center; */
 }
 
 .people {
@@ -61,7 +57,6 @@
   @include size-bp994(4);
 
   background: orange;
-  text-align: center;
 }
 
 .office {

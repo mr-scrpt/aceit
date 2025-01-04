@@ -117,3 +117,38 @@
     ); /* инвертировали матрицу по вертикали */
   }
 }
+
+.sectionGradientBorder {
+  /* position: absolute; */
+
+  /* width: 100%; */
+
+  /* height: 100%; */
+
+  /* left: 0; */
+
+  /* top: 0; */
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* равносильно top: 0; right: 0; bottom: 0; left: 0; */
+    border-radius: 28px;
+
+    /* opacity: 0.4; */
+    padding: 2px;
+    background: linear-gradient(
+      135deg,
+      rgb(240 240 240 / 15%) 0%,
+      transparent 45%,
+      transparent 55%,
+      rgb(240 240 240 / 15%) 100% /* rgb(106 83 254 / 60%) 100% */
+    );
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}

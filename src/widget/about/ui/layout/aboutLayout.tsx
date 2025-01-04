@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes, ReactNode } from "react";
-import sHeaderLayout from "./aboutLayout.module.scss";
+import sAboutLayout from "./aboutLayout.module.scss";
 import { sDeco, sLayout, sPage } from "@/shared/style";
 import clsx from "clsx";
 import { Text } from "../text/text";
@@ -26,37 +26,41 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
   } = props;
   return (
     <div className={sLayout.wrapper}>
-      <div className={sHeaderLayout.inner}>
-        <div className={sHeaderLayout.row}>
-          <div className={clsx(sHeaderLayout.text, sPage.card)}>{TextSlot}</div>
-          {/* <div className={clsx(sHeaderLayout.people, sPage.card)}> */}
-          {/*   {PeopleSlot} */}
-          {/* </div> */}
-          <div className={clsx(sPage.card, sHeaderLayout.people)}>
+      <div className={sAboutLayout.inner}>
+        <div className={sAboutLayout.row}>
+          <div className={clsx(sAboutLayout.text, sPage.card)}>{TextSlot}</div>
+          <div
+            className={clsx(
+              sPage.card,
+              sAboutLayout.people,
+              sDeco.sectionGradientBorder,
+            )}
+          >
             <div className={sDeco.sectionGradientLeftBottom}></div>
             <div className={sDeco.sectionGradientRightTop}></div>
           </div>
         </div>
-        <div className={sHeaderLayout.row}>
+        <div className={sAboutLayout.row}>
           <div
             className={clsx(
-              sHeaderLayout.work,
+              sAboutLayout.work,
               sPage.card,
               sDeco.sectionGradientPrimary,
+              sDeco.sectionGradientBorder,
             )}
           >
             {WorkSlot}
           </div>
-          <div className={clsx(sHeaderLayout.snack, sPage.card)}>
+          <div className={clsx(sAboutLayout.snack, sPage.card)}>
             {SnackSlot}
           </div>
-          <div className={clsx(sHeaderLayout.sport, sPage.card)}>
+          <div className={clsx(sAboutLayout.sport, sPage.card)}>
             {SportSlot}
           </div>
         </div>
-        <div className={sHeaderLayout.row}>
-          <div className={clsx(sHeaderLayout.office, sPage.card)}>Office</div>
-          <div className={clsx(sHeaderLayout.course, sPage.card)}>
+        <div className={sAboutLayout.row}>
+          <div className={clsx(sAboutLayout.office, sPage.card)}>Office</div>
+          <div className={clsx(sAboutLayout.course, sPage.card)}>
             {CourseSlot}
           </div>
         </div>
