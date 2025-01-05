@@ -1,3 +1,5 @@
+@import "@/shared/style";
+
 .positionSnippet {
 }
 
@@ -6,6 +8,11 @@
   flex-direction: column;
   gap: 20px;
   padding: 40px;
+
+  @include bp994-block {
+    padding: 60px 40px;
+    gap: 25px;
+  }
 }
 
 .title {
@@ -13,7 +20,12 @@
 
 .tagBox {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+
+  @include bp994-block {
+    margin-bottom: 20px;
+  }
 }
 
 .line {

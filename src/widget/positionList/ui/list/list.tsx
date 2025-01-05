@@ -19,7 +19,7 @@ export const List: FC<PositionListProps> = (props) => {
               className={clsx(
                 sList.item,
                 sPage.card,
-                sDeco.sectionGradientBorder,
+                sDeco.sectionGradientBorderAndHover,
               )}
             />
           ))}

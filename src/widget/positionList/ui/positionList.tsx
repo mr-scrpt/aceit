@@ -9,7 +9,9 @@ interface PositionListProps extends HTMLAttributes<HTMLDivElement> {}
 export const PositionList: FC<PositionListProps> = (props) => {
   return (
     <PositionLayout
-      TitleSlot={<Title className={sPositionLayout.title}>Open Position</Title>}
+      TitleSlot={
+        <Title className={sPositionLayout.title}>Open Positions</Title>
+      }
       PositionListSlot={<List />}
     />
   );
