@@ -40,10 +40,16 @@
   height: 32px;
 }
 
-// VIWE
+/* VIWE */
 
-/* .view_primary .icon { */
+.view_with_icon {
+  &.size_m .icon {
+    width: 12px;
+    height: 12px;
+  }
 
-/*   background: red; */
-
-/* } */
+  &.size_l .icon {
+    width: 18px;
+    height: 18px;
+  }
+}

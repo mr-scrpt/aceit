@@ -13,5 +13,13 @@
 /* и использовать иконки разных цветов в разных местах */
 
 .icon.arrow_flat {
-  mask-image: url("../img/arrow_flat.svg");
+  mask-image: url("../img/icon_arrow_flat.svg");
+}
+
+.icon.arrow_tile {
+  mask-image: url("../img/icon_arrow_tile.svg");
+}
+
+.icon.calendar {
+  mask-image: url("../img/icon_calendar.svg");
 }

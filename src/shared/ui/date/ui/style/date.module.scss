@@ -1,0 +1,26 @@
+.date {
+  margin: 0;
+  padding: 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  background: var(--date-text);
+  width: 22px;
+  height: 22px;
+}
+
+.text {
+  color: var(--date-text);
+
+  /* color: transparent; */
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-bottom: -4px;
+}
