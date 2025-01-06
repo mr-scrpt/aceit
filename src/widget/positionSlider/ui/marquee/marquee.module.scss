@@ -1,8 +1,10 @@
 .marqueeWrapper {
-  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   height: 120px;
   overflow: hidden;
   position: relative;
+  mask: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
 }
 
 .marquee {
@@ -37,6 +39,18 @@
   border-radius: 20px;
 }
 
+.item_bg_red {
+  background-color: red;
+}
+
+.item_bg_blue {
+  background-color: blue;
+}
+
+.item_bg_pink {
+  background-color: pink;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -45,9 +59,4 @@
   100% {
     transform: translateX(-50%);
   }
-}
-
-// Плавное затухание по краям
-.marqueeWrapper {
-  mask: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
 }
