@@ -1,21 +1,18 @@
+import { sLayout } from "@/shared/style";
 import { FC, HTMLAttributes, ReactNode } from "react";
 import sPositionListLayout from "./positionLayout.module.scss";
-import { sDeco, sLayout } from "@/shared/style";
-import clsx from "clsx";
 
 interface PostionLayoutProps extends HTMLAttributes<HTMLDivElement> {
-  TitleSlot: ReactNode;
-  PositionListSlot: ReactNode;
+  PositionMerqueeSlot: ReactNode;
 }
 
 export const PositionLayout: FC<PostionLayoutProps> = (props) => {
-  const { TitleSlot, PositionListSlot } = props;
+  const { PositionMerqueeSlot } = props;
 
   return (
     <section className={sLayout.wrapper}>
       <div className={sPositionListLayout.inner}>
-        <div className={sPositionListLayout.menu}>{TitleSlot}</div>
-        <div className={sPositionListLayout.social}>{PositionListSlot}</div>
+        <div className={sPositionListLayout.menu}>{PositionMerqueeSlot}</div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import { POSITION_LIST } from "@/entity/postition/model/position.model";
 import { PositionSnippet } from "@/entity/postition/ui/positionSnippet";
 import { FC, HTMLAttributes } from "react";
-import sList from "./list.module.scss";
+import sList from "./positionList.module.scss";
 import { sDeco, sPage } from "@/shared/style";
 import clsx from "clsx";
 

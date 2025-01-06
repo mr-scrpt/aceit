@@ -7,12 +7,13 @@ import { Sport } from "./sport/sport";
 import { Office } from "./office/office";
 import { Course } from "./course/course";
 
-interface AboutProps extends HTMLAttributes<HTMLDivElement> {}
+interface AboutModuleProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const About: FC<AboutProps> = (props) => {
+export const AboutModule: FC<AboutModuleProps> = (props) => {
   return (
     <AboutLayout
       TextSlot={<Text />}
+      PeopleSlot={<div>People</div>}
       WorkSlot={<Work />}
       SnackSlot={<Snack />}
       SportSlot={<Sport />}

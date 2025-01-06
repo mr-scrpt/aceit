@@ -1,1 +1,1 @@
-export { PositionList } from "./ui/positionList";
+export { PositionModuleList as PositionList } from "./ui/positionList.module";

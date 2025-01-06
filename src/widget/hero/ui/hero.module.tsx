@@ -4,9 +4,9 @@ import { Banner } from "./banner/banner";
 import { Action } from "./action/action";
 import { Desc } from "./desc/desc";
 
-interface HeroProps extends HTMLAttributes<HTMLDivElement> {}
+interface HeroModuleProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const Hero: FC<HeroProps> = (props) => {
+export const HeroModule: FC<HeroModuleProps> = (props) => {
   return (
     <HeroLayout
       slotBanner={<Banner />}

@@ -3,8 +3,8 @@ import { HeaderLayout } from "./layout/headerLayout";
 import { Logo } from "./logo/logo";
 import { Menu } from "@/shared/ui/menu/menu";
 
-interface Header extends HTMLAttributes<HTMLDivElement> {}
+interface HeaderModule extends HTMLAttributes<HTMLDivElement> {}
 
-export const Header: FC<Header> = (props) => {
+export const HeaderModule: FC<HeaderModule> = (props) => {
   return <HeaderLayout LogoSlot={<Logo />} MenuSlot={<Menu />} />;
 };

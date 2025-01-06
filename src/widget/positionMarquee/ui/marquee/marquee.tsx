@@ -1,11 +1,15 @@
 "use client";
 import { FC, useEffect, useRef, useState } from "react";
-import styles from "./positionMarquee.module.scss";
+import styles from "./marquee.module.scss";
 import { POSITION_NAME_LIST } from "@/entity/postition/model/positionName.model";
 import { shuffleArray } from "../../helper/shuffleArray.helper";
-import { MarqueeProps, COLORS, ColoredItem } from "../../domain/marquee.type";
+import {
+  MarqueeProps,
+  COLORS,
+  ColoredItem,
+} from "../../domain/postionMarquee.type";
 
-export const PositionMarquee: FC<MarqueeProps> = ({ className }) => {
+export const Marquee: FC<MarqueeProps> = ({ className }) => {
   const [topRowItems, setTopRowItems] = useState<typeof POSITION_NAME_LIST>([]);
   const [bottomRowItems, setBottomRowItems] = useState<
     typeof POSITION_NAME_LIST

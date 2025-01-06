@@ -1,1 +1,1 @@
-export { Footer } from "./ui/footer";
+export { FooterModule as Footer } from "./ui/footer.module";
