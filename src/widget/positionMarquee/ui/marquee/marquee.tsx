@@ -1,7 +1,7 @@
 "use client";
 import { FC, useEffect, useRef, useState } from "react";
 import styles from "./marquee.module.scss";
-import { POSITION_NAME_LIST } from "@/entity/postition/model/positionName.model";
+import { POSITION_NAME_LIST } from "@/entity/postition";
 import { shuffleArray } from "../../helper/shuffleArray.helper";
 import {
   MarqueeProps,
