@@ -2,31 +2,8 @@
 import { FC, useEffect, useRef, useState } from "react";
 import styles from "./marquee.module.scss";
 import { POSITION_NAME_LIST } from "@/entity/postition/model/positionName.model";
-
-interface MarqueeProps {
-  className?: string;
-}
-
-interface ColoredItem {
-  itemId: string;
-  color: "red" | "blue" | "pink";
-}
-
-const COLORS = ["red", "blue", "pink"] as const;
-
-const shuffleArray = <T,>(array: T[]): T[] => {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-};
-
-// Функция для получения случайного элемента из массива
-const getRandomItem = <T,>(array: T[]): T => {
-  return array[Math.floor(Math.random() * array.length)];
-};
+import { shuffleArray } from "../../helper/shuffleArray.helper";
+import { MarqueeProps, COLORS, ColoredItem } from "../../domain/marquee.type";
 
 export const Marquee: FC<MarqueeProps> = ({ className }) => {
   const [topRowItems, setTopRowItems] = useState<typeof POSITION_NAME_LIST>([]);
@@ -36,6 +13,50 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
   const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
   const [coloredItems, setColoredItems] = useState<ColoredItem[]>([]);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const isInitializedRef = useRef(false);
+
+  // Функция для инициализации цветных элементов
+  const initializeColoredItems = () => {
+    if (!wrapperRef.current || isInitializedRef.current) return;
+
+    const wrapperRect = wrapperRef.current.getBoundingClientRect();
+    const items = wrapperRef.current.querySelectorAll(`.${styles.item}`);
+    const visibleItemIds: string[] = [];
+
+    items.forEach((item) => {
+      const itemRect = item.getBoundingClientRect();
+      const itemId = item.getAttribute("data-item-id");
+
+      const isVisible =
+        itemRect.left < wrapperRect.right && itemRect.right > wrapperRect.left;
+
+      if (isVisible && itemId) {
+        visibleItemIds.push(itemId);
+      }
+    });
+
+    // Выбираем случайные 3 элемента из видимых и назначаем им цвета
+    const initialColoredItems: ColoredItem[] = [];
+    const shuffledColors = shuffleArray([...COLORS]);
+
+    for (let i = 0; i < 3 && i < visibleItemIds.length; i++) {
+      const randomIndex = Math.floor(Math.random() * visibleItemIds.length);
+      const selectedItemId = visibleItemIds.splice(randomIndex, 1)[0];
+
+      initialColoredItems.push({
+        itemId: selectedItemId,
+        color: shuffledColors[i],
+      });
+    }
+
+    setColoredItems(initialColoredItems);
+    setVisibleItems(
+      new Set(
+        visibleItemIds.concat(initialColoredItems.map((item) => item.itemId)),
+      ),
+    );
+    isInitializedRef.current = true;
+  };
 
   // Функция для проверки видимости элементов и обновления цветов
   const checkVisibilityAndUpdateColors = () => {
@@ -97,17 +118,28 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
     }
 
     setColoredItems(updatedColoredItems);
-    console.log("Visible items:", Array.from(newVisibleItems));
-    console.log("Colored items:", updatedColoredItems);
   };
 
+  // Эффект для инициализации цветных элементов
   useEffect(() => {
+    // Даем время на первичный рендеринг
+    const initTimeout = setTimeout(() => {
+      initializeColoredItems();
+    }, 100);
+
+    return () => clearTimeout(initTimeout);
+  }, [topRowItems, bottomRowItems]);
+
+  // Эффект для запуска интервала проверки
+  useEffect(() => {
+    if (!isInitializedRef.current) return;
+
     const intervalId = setInterval(checkVisibilityAndUpdateColors, 1000);
 
     return () => {
       clearInterval(intervalId);
     };
-  }, [coloredItems]); // Добавляем coloredItems в зависимости
+  }, [coloredItems, isInitializedRef.current]);
 
   useEffect(() => {
     const shuffledTopRowItems = shuffleArray([
@@ -144,7 +176,6 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
     setBottomRowItems(shuffledBottomRowItems);
   }, []);
 
-  // Вспомогательная функция для определения класса цвета элемента
   const getItemColorClass = (itemId: string): string => {
     const coloredItem = coloredItems.find((item) => item.itemId === itemId);
     if (!coloredItem) return "";

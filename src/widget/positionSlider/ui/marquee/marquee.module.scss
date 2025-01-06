@@ -1,3 +1,5 @@
+@import "@/shared/style";
+
 .marqueeWrapper {
   max-width: 800px;
   margin: 0 auto;
@@ -37,6 +39,8 @@
   box-shadow: 0 0 1px rgb(255 255 255 / 30%);
   padding: 10px 20px;
   border-radius: 20px;
+
+  @include mixin-ts(background-color);
 }
 
 .item_bg_red {
