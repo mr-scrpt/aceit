@@ -197,8 +197,8 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
   };
 
   return (
-    <div ref={wrapperRef} className={styles.marqueeWrapper}>
-      <div className={styles.marquee}>
+    <div ref={wrapperRef} className={styles.marquee}>
+      <div className={styles.inner}>
         <div className={styles.track}>
           <div className={styles.row}>
             {topRowItems.map((item, index) => {
