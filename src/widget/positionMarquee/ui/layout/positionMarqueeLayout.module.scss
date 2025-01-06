@@ -1,0 +1,22 @@
+@import "@/shared/style";
+
+.positionList {
+  margin: 0;
+  padding: 0;
+}
+
+.inner {
+  /* @include row-flex; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  @include bp994-block {
+    gap: 40px;
+  }
+}
+
+.title {
+  text-align: center;
+}

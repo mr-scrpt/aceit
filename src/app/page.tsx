@@ -1,7 +1,7 @@
 import { About } from "@/widget/about/ui/about";
 import { Hero } from "@/widget/hero";
 import { PositionList } from "@/widget/positionList";
-import { Marquee } from "@/widget/positionSlider/ui/marquee/marquee";
+import { PositionMarquee } from "@/widget/positionMarquee";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <About />
       <PositionList />
-      <Marquee />
+      <PositionMarquee />
     </>
   );
 }
