@@ -1,1 +1,1 @@
-export { HeroModule as Hero } from "./ui/hero.module";
+export { HeroModule } from "./ui/hero.module";

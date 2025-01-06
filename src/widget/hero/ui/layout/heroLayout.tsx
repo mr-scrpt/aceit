@@ -11,12 +11,12 @@ interface HeroLayoutProps extends HTMLAttributes<HTMLDivElement> {
 export const HeroLayout: FC<HeroLayoutProps> = (props) => {
   const { slotBanner, slotDesc, slotAction } = props;
   return (
-    <div className={sLayout.wrapper}>
+    <section className={sLayout.wrapper}>
       <div className={sHeroLayout.inner}>
         <div className={sHeroLayout.row}>{slotBanner}</div>
         <div className={sHeroLayout.row}>{slotDesc}</div>
         <div className={sHeroLayout.row}>{slotAction}</div>
       </div>
-    </div>
+    </section>
   );
 };

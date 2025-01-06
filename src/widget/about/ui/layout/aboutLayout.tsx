@@ -25,7 +25,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
     CourseSlot,
   } = props;
   return (
-    <div className={sLayout.wrapper}>
+    <section className={sLayout.wrapper}>
       <div className={sAboutLayout.inner}>
         <div className={sAboutLayout.row}>
           <div className={clsx(sAboutLayout.text, sPage.card)}>{TextSlot}</div>
@@ -100,6 +100,6 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

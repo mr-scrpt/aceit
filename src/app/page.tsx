@@ -1,15 +1,15 @@
-import { AboutModule } from "@/widget/about/ui/about.module";
-import { Hero } from "@/widget/hero";
-import { PositionList } from "@/widget/positionList";
-import { PositionMarquee } from "@/widget/positionMarquee";
+import { AboutModule } from "@/widget/about";
+import { HeroModule } from "@/widget/hero";
+import { PositionListModule } from "@/widget/positionList";
+import { PositionMerqueeModule } from "@/widget/positionMarquee";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <HeroModule />
       <AboutModule />
-      <PositionList />
-      <PositionMarquee />
+      <PositionListModule />
+      <PositionMerqueeModule />
     </>
   );
 }

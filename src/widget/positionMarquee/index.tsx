@@ -1,1 +1,1 @@
-export { Marquee as PositionMarquee } from "./ui/marquee/marquee";
+export { PositionMerqueeModule } from "./ui/positionMerquee.module";

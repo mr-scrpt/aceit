@@ -5,7 +5,7 @@ import { List } from "./list/positionList";
 
 interface PositionListModuleProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const PositionModuleList: FC<PositionListModuleProps> = (props) => {
+export const PositionListModule: FC<PositionListModuleProps> = (props) => {
   return (
     <PositionListLayout
       TitleSlot={<Title>Open Positions</Title>}

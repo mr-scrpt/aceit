@@ -6,7 +6,6 @@
 }
 
 .inner {
-  /* @include row-flex; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -17,6 +16,5 @@
   }
 }
 
-.title {
-  text-align: center;
+.marquee {
 }
