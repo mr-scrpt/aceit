@@ -1,8 +1,11 @@
 @import "@/shared/style";
 
-.positionList {
-  margin: 0;
-  padding: 0;
+.positionMerquee {
+  display: none;
+
+  @include bp994-block {
+    display: block;
+  }
 }
 
 .inner {

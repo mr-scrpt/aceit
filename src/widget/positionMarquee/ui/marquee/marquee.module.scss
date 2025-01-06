@@ -1,12 +1,8 @@
 @import "@/shared/style";
 
 .marquee {
-  max-width: 800px;
-  margin: 0 auto;
-  height: 120px;
-  overflow: hidden;
-  position: relative;
-  mask: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  margin: 0;
+  padding: 0;
 }
 
 .inner {
@@ -43,16 +39,34 @@
   @include mixin-ts(background-color);
 }
 
-.item_bg_red {
-  background-color: red;
+.item_attention_first {
+  background: linear-gradient(
+    180deg,
+    #ffefda -23.2%,
+    #e6ab5c 15.38%,
+    #e6972e 51.47%,
+    #dc9433 100%
+  );
 }
 
-.item_bg_blue {
-  background-color: blue;
+.item_attention_second {
+  background:
+    linear-gradient(70.76deg, rgb(224 49 227 / 0%) 57.63%, #77d6ff 96.95%),
+    radial-gradient(
+        148.65% 464.44% at 144.93% 391.11%,
+        #df2fe1 63.66%,
+        rgb(223 47 225 / 0%) 100%
+      )
+      #286afb;
 }
 
-.item_bg_pink {
-  background-color: pink;
+.item_attention_third {
+  background: radial-gradient(
+      206.42% 387.78% at 202.7% 314.44%,
+      #df2fe1 63.66%,
+      rgb(223 47 225 / 0%) 100%
+    )
+    #d7768a;
 }
 
 @keyframes scroll {

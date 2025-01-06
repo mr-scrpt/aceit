@@ -5,7 +5,7 @@ import { POSITION_NAME_LIST } from "@/entity/postition/model/positionName.model"
 import { shuffleArray } from "../../helper/shuffleArray.helper";
 import {
   MarqueeProps,
-  COLORS,
+  APPEARANCE,
   ColoredItem,
 } from "../../domain/postionMarquee.type";
 
@@ -41,7 +41,7 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
 
     // Выбираем случайные 3 элемента из видимых и назначаем им цвета
     const initialColoredItems: ColoredItem[] = [];
-    const shuffledColors = shuffleArray([...COLORS]);
+    const shuffledColors = shuffleArray([...APPEARANCE]);
 
     for (let i = 0; i < 3 && i < visibleItemIds.length; i++) {
       const randomIndex = Math.floor(Math.random() * visibleItemIds.length);
@@ -49,7 +49,7 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
 
       initialColoredItems.push({
         itemId: selectedItemId,
-        color: shuffledColors[i],
+        appearance: shuffledColors[i],
       });
     }
 
@@ -93,8 +93,12 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
     // Если какие-то цветные элементы исчезли, назначаем их цвета новым элементам
     const missingColorsCount = 3 - updatedColoredItems.length;
     if (missingColorsCount > 0) {
-      const usedColors = new Set(updatedColoredItems.map((item) => item.color));
-      const availableColors = COLORS.filter((color) => !usedColors.has(color));
+      const usedColors = new Set(
+        updatedColoredItems.map((item) => item.appearance),
+      );
+      const availableColors = APPEARANCE.filter(
+        (color) => !usedColors.has(color),
+      );
 
       const coloredItemIds = new Set(
         updatedColoredItems.map((item) => item.itemId),
@@ -116,7 +120,7 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
 
         updatedColoredItems.push({
           itemId: randomItem,
-          color: randomColor,
+          appearance: randomColor,
         });
       }
     }
@@ -184,13 +188,13 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
     const coloredItem = coloredItems.find((item) => item.itemId === itemId);
     if (!coloredItem) return "";
 
-    switch (coloredItem.color) {
-      case "red":
-        return styles.item_bg_red;
-      case "blue":
-        return styles.item_bg_blue;
-      case "pink":
-        return styles.item_bg_pink;
+    switch (coloredItem.appearance) {
+      case "first":
+        return styles.item_attention_first;
+      case "second":
+        return styles.item_attention_second;
+      case "third":
+        return styles.item_attention_third;
       default:
         return "";
     }

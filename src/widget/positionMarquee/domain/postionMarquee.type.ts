@@ -4,7 +4,7 @@ export interface MarqueeProps {
 
 export interface ColoredItem {
   itemId: string;
-  color: "red" | "blue" | "pink";
+  appearance: "first" | "second" | "third";
 }
 
-export const COLORS = ["red", "blue", "pink"] as const;
+export const APPEARANCE = ["first", "second", "third"] as const;

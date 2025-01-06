@@ -61,6 +61,14 @@
   background: var(--text-gradient-radial-ghosty);
 }
 
+.sectionOverflow {
+  overflow: hidden;
+}
+
+.sectionHiddeSide {
+  mask: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
 /* GRADIENT  */
 
 .sectionGradientFill {

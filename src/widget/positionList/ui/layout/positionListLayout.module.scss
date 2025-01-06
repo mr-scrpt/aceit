@@ -10,9 +10,11 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  padding: 10px 0 30px;
 
   @include bp994-block {
     gap: 40px;
+    padding: 10px 0 100px;
   }
 }
 
