@@ -1,5 +1,14 @@
 "use client";
+import { ButtonSubmitComponentType } from "@/shared/type/button.type";
+import { Button } from "@/shared/ui/shadcn/button/button";
+import {
+  FormField,
+  FormItem,
+  FormItemCol,
+  FormMessage,
+} from "@/shared/ui/shadcn/form/form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import clsx from "clsx";
 import { FC, HTMLAttributes, useEffect } from "react";
 import {
   DefaultValues,
@@ -8,21 +17,12 @@ import {
   useFormContext,
 } from "react-hook-form";
 import { ZodTypeAny } from "zod";
-import { ButtonSubmitComponentType } from "@/shared/type/button.type";
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/shared/ui/shadcn/form/form";
-import { ContactFirstNameElement } from "./elements/contactFirstName";
-import clsx from "clsx";
-import { Button } from "@/shared/ui/shadcn/button/button";
 import {
   contactDefaultFieldsValues,
   contactFormDefaultSchema,
   ContactFormDefaultValues,
 } from "../../domain/form.schema";
+import { ContactFirstNameElement } from "./elements/contactFirstName";
 
 interface ContactFormElementsProps<T extends ContactFormDefaultValues>
   extends HTMLAttributes<HTMLFormElement> {
@@ -38,7 +38,11 @@ type ContactFormElementsComponent = <
 ) => React.ReactElement;
 
 type ContactFormFields = {
-  FieldFirstName: FC;
+  FieldFirstName: FC<HTMLAttributes<HTMLDivElement>>;
+  FieldSecondName: FC<HTMLAttributes<HTMLDivElement>>;
+  FieldPhoneNumber: FC;
+  FieldEmail: FC;
+  FieldPosition: FC;
   SubmitButton: ButtonSubmitComponentType;
 };
 
@@ -84,16 +88,98 @@ export const ContactFormElements: ContactFormElementsType = <
   );
 };
 
-ContactFormElements.FieldFirstName = function FieldSettlement() {
+ContactFormElements.FieldFirstName = function FieldFirstName(props) {
+  const { className } = props;
   const { control } = useFormContext<ContactFormDefaultValues>();
+  console.log("output_log: classNameC =>>>", className);
 
   return (
     <FormField
       control={control}
       name="firstName"
       render={({ field }) => (
+        <FormItemCol className={className}>
+          <ContactFirstNameElement
+            value={field.value}
+            onChange={field.onChange}
+          />
+          <FormMessage />
+        </FormItemCol>
+      )}
+    />
+  );
+};
+ContactFormElements.FieldSecondName = function FieldSecondName(props) {
+  const { className } = props;
+  const { control } = useFormContext<ContactFormDefaultValues>();
+
+  return (
+    <FormField
+      control={control}
+      name="secondName"
+      render={({ field }) => (
+        <FormItemCol className={className}>
+          <ContactFirstNameElement
+            value={field.value}
+            onChange={field.onChange}
+          />
+          <FormMessage />
+        </FormItemCol>
+      )}
+    />
+  );
+};
+
+ContactFormElements.FieldPhoneNumber = function FieldPhoneNumber() {
+  const { control } = useFormContext<ContactFormDefaultValues>();
+
+  return (
+    <FormField
+      control={control}
+      name="phoneNumber"
+      render={({ field }) => (
         <FormItem>
-          <FormLabel>Street</FormLabel>
+          <ContactFirstNameElement
+            value={field.value}
+            onChange={field.onChange}
+          />
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+};
+
+ContactFormElements.FieldEmail = function FieldEmail() {
+  const { control } = useFormContext<ContactFormDefaultValues>();
+
+  return (
+    <FormField
+      control={control}
+      name="email"
+      render={({ field }) => (
+        <FormItem>
+          <ContactFirstNameElement
+            value={field.value}
+            onChange={field.onChange}
+          />
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+};
+
+// TODO: MOVE to POSITION
+ContactFormElements.FieldPosition = function FieldPosition() {
+  const { control } = useFormContext<ContactFormDefaultValues>();
+
+  return (
+    <FormField
+      control={control}
+      name="position"
+      render={({ field }) => (
+        <FormItem>
           <ContactFirstNameElement
             value={field.value}
             onChange={field.onChange}

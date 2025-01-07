@@ -1,6 +1,10 @@
 // NOTE: Base
 export type Contact = {
   firstName: string;
+  secondName: string;
+  phoneNumber: string;
+  email: string;
+  position: string;
 };
 
 // // NOTE: Entity

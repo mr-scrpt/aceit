@@ -9,17 +9,16 @@ import {
 } from "../domain/form.schema";
 import { useContactCreateHandler } from "../vm/useContactSend.handler";
 // import { useContactCreateHandler } from "../_vm/useContactCreate.handler";
+import sContactFormSendLayout from "./layout/contactFormLayout.module.scss";
 
 interface ContactFormCreateProps extends HTMLAttributes<HTMLDivElement> {
-  userId: string;
-  settlementRef: string;
   callbackUrl?: string;
   className?: string;
   onSuccess?: () => void;
 }
 
-export const ContactFormCreate: FC<ContactFormCreateProps> = (props) => {
-  const { userId, settlementRef, callbackUrl, className, onSuccess } = props;
+export const ContactFormSendModule: FC<ContactFormCreateProps> = (props) => {
+  const { callbackUrl, className, onSuccess } = props;
 
   const { handleContactCreate, isPendingCreate } = useContactCreateHandler({
     // data: { userId, settlementRef },
@@ -32,13 +31,24 @@ export const ContactFormCreate: FC<ContactFormCreateProps> = (props) => {
   // }
 
   return (
-    <div className={clsx(className, "w-full")}>
+    <div className={clsx(className, sContactFormSendLayout.contactFormLayout)}>
       <ContactFormElements<ContactCreateFormValues>
         handleSubmit={handleContactCreate}
         schema={contactCreateFormSchema}
         defaultValues={contactCreateDefaultFieldsValues}
+        className={sContactFormSendLayout.inner}
       >
-        <ContactFormElements.FieldFirstName />
+        <div className={sContactFormSendLayout.row}>
+          <ContactFormElements.FieldFirstName
+            className={sContactFormSendLayout.col}
+          />
+          <ContactFormElements.FieldSecondName
+            className={sContactFormSendLayout.col}
+          />
+        </div>
+        <ContactFormElements.FieldPhoneNumber />
+        <ContactFormElements.FieldEmail />
+        <ContactFormElements.FieldPosition />
         <ContactFormElements.SubmitButton
           isPending={isPendingCreate}
           submitText={"Create Contact"}

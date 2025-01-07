@@ -1,0 +1,56 @@
+.Input {
+  display: flex;
+  height: 3.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+
+  /* border: 1px solid rgba(var(--input-border), 100%); */
+  border: 1px solid hsl(from var(--input-border) h s l / 55%);
+  background-color: hsl(from var(--input-background) h s l / 100%);
+  padding: 0.5rem 0.75rem 0.5rem 1rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  color: hsl(from var(--input-color) h s l / 90%);
+  font-weight: 500;
+  max-width: 30rem;
+}
+
+.Input:focus {
+  border: 1px solid hsl(from var(--input-border) h s l / 15%);
+  color: hsl(from var(--input-color) h s l / 100%);
+}
+
+.Input:-webkit-autofill {
+  border: 1px solid hsl(from var(--input-border) h s l / 15%);
+  color: hsl(from var(--input-color) h s l / 100%);
+}
+
+.Input::placeholder {
+  color: hsl(from var(--input-color) h s l / 70%);
+}
+
+.Input:focus-visible {
+  outline: none;
+  border: 1px solid rgba(from var(--input-border) r g b / 15%);
+}
+
+.Input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.passwordButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-right: 0.5rem;
+  z-index: 2;
+}

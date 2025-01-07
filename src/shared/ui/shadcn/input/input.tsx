@@ -2,7 +2,7 @@ import * as React from "react";
 import { Button } from "../button/button";
 import { EyeClosedIcon, EyeOpenIcon } from "@radix-ui/react-icons";
 
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -12,6 +12,8 @@ export interface InputProps
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ type, className, onPasswordVisible, ...props }, ref) => {
     const [isVisible, setIsVisible] = React.useState(false);
+
+    // console.log("output_log: className%%%% =>>>", className);
 
     function handlePasswordEye() {
       setIsVisible((prevState) => !prevState);

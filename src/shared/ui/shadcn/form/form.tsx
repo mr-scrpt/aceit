@@ -12,7 +12,7 @@ import {
   useFormContext,
 } from "react-hook-form";
 import { Label } from "../label/label";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const FormProvider = HookFormProvider;
 
@@ -85,6 +85,24 @@ const FormItem = React.forwardRef<
 });
 FormItem.displayName = "FormItem";
 
+const FormItemCol = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  const id = React.useId();
+
+  return (
+    <FormItemContext.Provider value={{ id }}>
+      <div
+        ref={ref}
+        style={{ padding: "0.5rem 0" }}
+        className={className}
+        {...props}
+      />
+    </FormItemContext.Provider>
+  );
+});
+FormItemCol.displayName = "FormItemRow";
 const getFriendlyName = (labelName: string) => {
   const words = labelName.split(/[_-]|(?=[A-Z])/); // Split by underscore, hyphen, or before uppercase letters
   const firstWord = words[0].charAt(0).toUpperCase() + words[0].slice(1);
@@ -188,6 +206,7 @@ export {
   FormProvider,
   Form,
   FormItem,
+  FormItemCol,
   FormLabel,
   FormControl,
   FormDescription,
