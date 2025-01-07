@@ -23,6 +23,10 @@ import {
   ContactFormDefaultValues,
 } from "../../domain/form.schema";
 import { ContactFirstNameElement } from "./elements/contactFirstName";
+import { ContactSecondNameElement } from "./elements/contactSecondName";
+import { ContactPhoneNumberElement } from "./elements/contactPhoneNumber";
+import { ContactEmailElement } from "./elements/contactEmail";
+import { ContactPositionElement } from "./elements/contactPosition";
 
 interface ContactFormElementsProps<T extends ContactFormDefaultValues>
   extends HTMLAttributes<HTMLFormElement> {
@@ -119,7 +123,7 @@ ContactFormElements.FieldSecondName = function FieldSecondName(props) {
       name="secondName"
       render={({ field }) => (
         <FormItemCol className={className}>
-          <ContactFirstNameElement
+          <ContactSecondNameElement
             value={field.value}
             onChange={field.onChange}
           />
@@ -139,7 +143,7 @@ ContactFormElements.FieldPhoneNumber = function FieldPhoneNumber() {
       name="phoneNumber"
       render={({ field }) => (
         <FormItem>
-          <ContactFirstNameElement
+          <ContactPhoneNumberElement
             value={field.value}
             onChange={field.onChange}
           />
@@ -159,10 +163,7 @@ ContactFormElements.FieldEmail = function FieldEmail() {
       name="email"
       render={({ field }) => (
         <FormItem>
-          <ContactFirstNameElement
-            value={field.value}
-            onChange={field.onChange}
-          />
+          <ContactEmailElement value={field.value} onChange={field.onChange} />
           <FormMessage />
         </FormItem>
       )}
@@ -180,7 +181,7 @@ ContactFormElements.FieldPosition = function FieldPosition() {
       name="position"
       render={({ field }) => (
         <FormItem>
-          <ContactFirstNameElement
+          <ContactPositionElement
             value={field.value}
             onChange={field.onChange}
           />

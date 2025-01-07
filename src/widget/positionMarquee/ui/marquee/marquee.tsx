@@ -1,19 +1,20 @@
 "use client";
 import { FC, useEffect, useRef, useState } from "react";
 import styles from "./marquee.module.scss";
-import { POSITION_NAME_LIST } from "@/entity/postition";
 import { shuffleArray } from "../../helper/shuffleArray.helper";
 import {
   MarqueeProps,
   APPEARANCE,
   ColoredItem,
 } from "../../domain/postionMarquee.type";
+import { usePositionNameListModel } from "@/entity/postition";
 
 export const Marquee: FC<MarqueeProps> = ({ className }) => {
-  const [topRowItems, setTopRowItems] = useState<typeof POSITION_NAME_LIST>([]);
-  const [bottomRowItems, setBottomRowItems] = useState<
-    typeof POSITION_NAME_LIST
-  >([]);
+  const { positionNameList } = usePositionNameListModel();
+  const [topRowItems, setTopRowItems] = useState<typeof positionNameList>([]);
+  const [bottomRowItems, setBottomRowItems] = useState<typeof positionNameList>(
+    [],
+  );
   const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
   const [coloredItems, setColoredItems] = useState<ColoredItem[]>([]);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -151,33 +152,33 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
 
   useEffect(() => {
     const shuffledTopRowItems = shuffleArray([
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
     ]);
 
     const shuffledBottomRowItems = shuffleArray([
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
-      ...POSITION_NAME_LIST,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
+      ...positionNameList,
     ]);
 
     setTopRowItems(shuffledTopRowItems);
