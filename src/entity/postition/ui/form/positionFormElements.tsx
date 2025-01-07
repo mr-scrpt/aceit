@@ -95,7 +95,10 @@ PositionFormElements.FieldPositionSelect = function FieldFirstName(props) {
       name="positionList"
       render={({ field }) => (
         <FormItemCol className={className}>
-          <PositionSelectElement onSelectPosition={field.onChange} />
+          <PositionSelectElement
+            onSelectPosition={field.onChange}
+            positionActive={field.value?.[0]}
+          />
           <FormMessage />
         </FormItemCol>
       )}

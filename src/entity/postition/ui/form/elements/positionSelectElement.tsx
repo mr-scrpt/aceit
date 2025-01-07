@@ -13,10 +13,15 @@ export const PositionSelectElement: FC<PositionSelectProps> = (props) => {
   const { positionNameListToSelect } = usePositionListToSelectModel();
 
   const placeholder = "Select position...";
+
+  console.log("output_log: PositionActive =>>>", positionActive);
   return (
     <SelectElement
       optionActive={positionActive}
-      onSelect={onSelectPosition}
+      onSelect={(item) => {
+        console.log("output_log: SELECT =>>>", item);
+        onSelectPosition(item);
+      }}
       optionList={positionNameListToSelect}
       placeholder={placeholder}
     />
