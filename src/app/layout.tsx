@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={page.size}>
+    <html lang="en" className={clsx(page.size)}>
       <body
         className={clsx(gilroy.className, deco.spot, page.base, page.geometri)}
       >
