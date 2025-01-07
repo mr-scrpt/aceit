@@ -3,12 +3,22 @@ import { z } from "zod";
 export const positionDefaultSelectOptionSchema = z.object({
   value: z.string(),
   label: z.string(),
-  street: z.string(),
-  house: z.string(),
-  apartment: z.string().nullable(),
   active: z.boolean().optional(),
 });
 
 export type PositionDefaultSelectOption = z.infer<
   typeof positionDefaultSelectOptionSchema
 >;
+
+export const positionFormDefaultSchema = z.object({
+  positionList: z.array(positionDefaultSelectOptionSchema).optional(),
+});
+
+export type PositionFormDefaultValues<
+  T extends z.ZodTypeAny = typeof positionFormDefaultSchema,
+> = z.infer<T>;
+
+// TODO: DefaultValues
+export const positionDefaultFieldsValues: PositionFormDefaultValues = {
+  positionList: [],
+};

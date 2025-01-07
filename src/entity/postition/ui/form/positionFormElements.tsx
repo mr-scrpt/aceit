@@ -3,7 +3,6 @@ import { ButtonSubmitComponentType } from "@/shared/type/button.type";
 import { Button } from "@/shared/ui/shadcn/button/button";
 import {
   FormField,
-  FormItem,
   FormItemCol,
   FormMessage,
 } from "@/shared/ui/shadcn/form/form";
@@ -18,11 +17,11 @@ import {
 } from "react-hook-form";
 import { ZodTypeAny } from "zod";
 import {
-  contactDefaultFieldsValues,
-  contactFormDefaultSchema,
+  positionDefaultFieldsValues,
+  positionFormDefaultSchema,
   PositionFormDefaultValues,
-} from "../../domain/form.schema";
-import { PositionFirstNameElement } from "./elements/contactFirstName";
+} from "../../domain/position.schema";
+import { PositionSelectElement } from "./elements/positionSelectElement";
 
 interface PositionFormElementsProps<T extends PositionFormDefaultValues>
   extends HTMLAttributes<HTMLFormElement> {
@@ -49,7 +48,7 @@ const getDefaultFormValues = <T extends PositionFormDefaultValues>(
   defaultValues?: DefaultValues<T> | undefined,
 ): DefaultValues<T> => {
   return {
-    ...contactDefaultFieldsValues,
+    ...positionDefaultFieldsValues,
     ...defaultValues,
   } as DefaultValues<T>;
 };
@@ -62,7 +61,7 @@ export const PositionFormElements: PositionFormElementsType = <
   const { defaultValues, handleSubmit: onSubmit, schema, children } = props;
 
   const form = useForm<T>({
-    resolver: zodResolver(schema ?? contactFormDefaultSchema),
+    resolver: zodResolver(schema ?? positionFormDefaultSchema),
     defaultValues: { ...getDefaultFormValues<T>(defaultValues) },
   });
   console.log("output_log: VALUES =>>>", form.getValues());
@@ -93,13 +92,10 @@ PositionFormElements.FieldPositionSelect = function FieldFirstName(props) {
   return (
     <FormField
       control={control}
-      name="firstName"
+      name="positionList"
       render={({ field }) => (
         <FormItemCol className={className}>
-          <PositionFirstNameElement
-            value={field.value}
-            onChange={field.onChange}
-          />
+          <PositionSelectElement onSelectPosition={field.onChange} />
           <FormMessage />
         </FormItemCol>
       )}

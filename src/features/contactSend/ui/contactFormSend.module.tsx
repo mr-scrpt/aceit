@@ -10,6 +10,7 @@ import {
 import { useContactCreateHandler } from "../vm/useContactSend.handler";
 // import { useContactCreateHandler } from "../_vm/useContactCreate.handler";
 import sContactFormSendLayout from "./layout/contactFormLayout.module.scss";
+import { PositionFormElements } from "@/entity/postition";
 
 interface ContactFormCreateProps extends HTMLAttributes<HTMLDivElement> {
   callbackUrl?: string;
@@ -48,7 +49,7 @@ export const ContactFormSendModule: FC<ContactFormCreateProps> = (props) => {
         </div>
         <ContactFormElements.FieldPhoneNumber />
         <ContactFormElements.FieldEmail />
-        <ContactFormElements.FieldPosition />
+        <PositionFormElements.FieldPositionSelect />
         <ContactFormElements.SubmitButton
           isPending={isPendingCreate}
           submitText={"Create Contact"}

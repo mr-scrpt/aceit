@@ -3,11 +3,10 @@ import { z } from "zod";
 // NOTE: FORM
 // NOTE: Main information
 export const contactFormDefaultSchema = z.object({
-  firstName: z.string(),
-  secondName: z.string(),
-  phoneNumber: z.string(),
+  firstName: z.string().nonempty(),
+  secondName: z.string().nonempty(),
+  phoneNumber: z.string().nonempty(),
   email: z.string().email(),
-  position: z.string(),
 });
 
 export type ContactFormDefaultValues<
@@ -20,5 +19,4 @@ export const contactDefaultFieldsValues: ContactFormDefaultValues = {
   secondName: "",
   phoneNumber: "",
   email: "",
-  position: "",
 };
