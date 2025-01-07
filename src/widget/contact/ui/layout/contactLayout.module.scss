@@ -1,0 +1,45 @@
+@import "@/shared/style";
+
+.inner {
+  padding: 10px 0 30px;
+
+  @include bp994-block {
+    padding: 10px 0 130px;
+  }
+}
+
+.row {
+  @include row-flex;
+}
+
+.presentation {
+  @include col;
+  @include size(6);
+
+  display: none;
+
+  @include bp994-block {
+    display: flex;
+    padding: 40px 80px;
+  }
+
+  @include bp1100-block {
+    padding: 80px 115px;
+  }
+}
+
+.form {
+  @include col;
+  @include size(12);
+  @include size-bp994(6);
+
+  padding: 30px;
+
+  @include bp994-block {
+    padding: 40px 80px;
+  }
+
+  @include bp1100-block {
+    padding: 80px 115px;
+  }
+}
