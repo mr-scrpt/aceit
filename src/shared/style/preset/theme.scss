@@ -5,8 +5,7 @@
   --foreground: var(--color-light-0);
   --text-light: var(--color-light-0);
   --link: var(--color-light-0);
-
-  /* BUTTON */
+  --scrollbar: hsl(from var(--color-accent-200) h s l / 60%); /* BUTTON */
   // primary
   --button-primary-background: var(--gradient-purple-primary);
   --button-primary-background-hover: var(--gradient-purple-secondary);
@@ -49,4 +48,10 @@
   --input-border: var(--color-light-0);
   --input-color: var(--color-light-0);
   --input-color-placeholder: var(--color-light-0);
+
+  /* SELECT */
+  --select-background: var(--color-dark-900);
+  --select-border: var(--color-light-0);
+  --select-color: var(--color-light-0);
+  --select-color-placeholder: var(--color-light-0);
 }

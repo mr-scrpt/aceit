@@ -31,6 +31,7 @@ export const SelectElement = <T extends DefaultSelectOption>(
 
   return (
     <Select
+      // open={true}
       defaultValue={defaultValue}
       value={defaultValue}
       onValueChange={(value) => {

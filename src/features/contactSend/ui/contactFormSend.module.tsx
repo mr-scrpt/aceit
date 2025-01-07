@@ -52,7 +52,7 @@ export const ContactFormSendModule: FC<ContactFormCreateProps> = (props) => {
         <PositionFormElements.FieldPositionSelect />
         <ContactFormElements.SubmitButton
           isPending={isPendingCreate}
-          submitText={"Create Contact"}
+          submitText={"Send"}
         />
       </ContactFormElements>
     </div>

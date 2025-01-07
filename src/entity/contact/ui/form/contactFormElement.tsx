@@ -22,11 +22,10 @@ import {
   contactFormDefaultSchema,
   ContactFormDefaultValues,
 } from "../../domain/form.schema";
-import { ContactFirstNameElement } from "./elements/contactFirstName";
-import { ContactSecondNameElement } from "./elements/contactSecondName";
-import { ContactPhoneNumberElement } from "./elements/contactPhoneNumber";
 import { ContactEmailElement } from "./elements/contactEmail";
-import { ContactPositionElement } from "./elements/contactPosition";
+import { ContactFirstNameElement } from "./elements/contactFirstName";
+import { ContactPhoneNumberElement } from "./elements/contactPhoneNumber";
+import { ContactSecondNameElement } from "./elements/contactSecondName";
 
 interface ContactFormElementsProps<T extends ContactFormDefaultValues>
   extends HTMLAttributes<HTMLFormElement> {
@@ -46,7 +45,6 @@ type ContactFormFields = {
   FieldSecondName: FC<HTMLAttributes<HTMLDivElement>>;
   FieldPhoneNumber: FC;
   FieldEmail: FC;
-  FieldPosition: FC;
   SubmitButton: ButtonSubmitComponentType;
 };
 
@@ -72,6 +70,7 @@ export const ContactFormElements: ContactFormElementsType = <
     resolver: zodResolver(schema ?? contactFormDefaultSchema),
     defaultValues: { ...getDefaultFormValues<T>(defaultValues) },
   });
+
   console.log("output_log: VALUES =>>>", form.getValues());
 
   useEffect(() => {
@@ -95,7 +94,6 @@ export const ContactFormElements: ContactFormElementsType = <
 ContactFormElements.FieldFirstName = function FieldFirstName(props) {
   const { className } = props;
   const { control } = useFormContext<ContactFormDefaultValues>();
-  console.log("output_log: classNameC =>>>", className);
 
   return (
     <FormField
@@ -164,27 +162,6 @@ ContactFormElements.FieldEmail = function FieldEmail() {
       render={({ field }) => (
         <FormItem>
           <ContactEmailElement value={field.value} onChange={field.onChange} />
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-  );
-};
-
-// TODO: MOVE to POSITION
-ContactFormElements.FieldPosition = function FieldPosition() {
-  const { control } = useFormContext<ContactFormDefaultValues>();
-
-  return (
-    <FormField
-      control={control}
-      name="position"
-      render={({ field }) => (
-        <FormItem>
-          <ContactPositionElement
-            value={field.value}
-            onChange={field.onChange}
-          />
           <FormMessage />
         </FormItem>
       )}
