@@ -1,4 +1,4 @@
-@import "@/shared/style/grid/smart-grid";
+@use "@/shared/style" as *;
 
 .title {
   width: 100%;
@@ -9,8 +9,9 @@
   width: 100%;
 }
 
-.text {
-}
+/* .text { */
+
+/* } */
 
 .size_s {
   font-size: 14px;

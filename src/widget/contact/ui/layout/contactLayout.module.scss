@@ -1,4 +1,4 @@
-@import "@/shared/style";
+@use "@/shared/style" as *;
 
 .inner {
   padding: 10px 0 30px;
@@ -29,11 +29,11 @@
 }
 
 .form {
+  padding: 30px;
+
   @include col;
   @include size(12);
   @include size-bp994(6);
-
-  padding: 30px;
 
   @include bp994-block {
     padding: 40px 80px;

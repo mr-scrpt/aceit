@@ -1,8 +1,2 @@
-@forward "./preset/var";
-@forward "./preset/color";
-@forward "./preset/theme";
-@forward "./preset/gradient";
-@forward "./preset/shadow";
-@forward "./animation/animation";
 @forward "./mixin/mixin" as mixin-*;
 @forward "./grid/smart-grid";

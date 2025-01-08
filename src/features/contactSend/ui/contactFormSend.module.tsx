@@ -22,14 +22,9 @@ export const ContactFormSendModule: FC<ContactFormCreateProps> = (props) => {
   const { callbackUrl, className, onSuccess } = props;
 
   const { handleContactCreate, isPendingCreate } = useContactCreateHandler({
-    // data: { userId, settlementRef },
     onSuccess,
     callbackUrl,
   });
-
-  // if (isPendingCreate) {
-  //   return <Spinner aria-label="Loading profile..." />;
-  // }
 
   return (
     <div className={clsx(className, sContactFormSendLayout.contactFormLayout)}>

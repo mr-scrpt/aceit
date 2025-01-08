@@ -1,4 +1,4 @@
-@import "@/shared/style/grid/smart-grid";
+@use "@/shared/style" as *;
 
 .inner {
   @include row-flex;

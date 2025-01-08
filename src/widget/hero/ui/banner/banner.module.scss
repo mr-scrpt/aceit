@@ -1,7 +1,4 @@
-@import "@/shared/style/grid/smart-grid";
-
-.banner {
-}
+@use "@/shared/style" as *;
 
 .inner {
   display: flex;

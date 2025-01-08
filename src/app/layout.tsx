@@ -1,12 +1,12 @@
 import { gilroy } from "@/shared/font";
 import { sDeco } from "@/shared/style";
 import clsx from "clsx";
-
-import "@/shared/style/test.scss";
+import "@/shared/style/global.scss";
 
 import type { Metadata } from "next";
 
-import page from "@/shared/style/fundamental/page.module.scss";
+import { sPage } from "@/shared/style";
+
 import { Header } from "@/widget/header";
 import { Footer } from "@/widget/footer";
 
@@ -21,8 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={clsx(page.size, page.geometri, page.scrollbar)}>
-      <body className={clsx(gilroy.className, sDeco.spot, page.base)}>
+    <html
+      lang="en"
+      className={clsx(sPage.size, sPage.geometri, sPage.scrollbar)}
+    >
+      <body className={clsx(gilroy.className, sDeco.spot, sPage.base)}>
         <Header />
         <main>{children}</main>
         <Footer />

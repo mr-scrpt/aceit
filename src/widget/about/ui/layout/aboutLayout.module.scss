@@ -1,4 +1,4 @@
-@import "@/shared/style";
+@use "@/shared/style" as *;
 
 .inner {
   display: flex;
@@ -16,12 +16,12 @@
 }
 
 .text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
   @include col;
   @include size(12);
   @include size-bp994(5);
-
-  margin-top: 15px;
-  margin-bottom: 15px;
 
   @include bp768-block {
     margin-top: 0;
@@ -30,101 +30,85 @@
 }
 
 .people {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
   @include col;
   @include size(12);
   @include size-bp994(7);
 
-  margin-top: 30px;
-  margin-bottom: 30px;
-
   @include bp768-block {
     margin-top: 0;
     margin-bottom: 0;
   }
-
-  /* background: blue; */
-  text-align: center;
-  overflow: hidden;
-  position: relative;
 }
 
 .work {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
   @include col;
   @include size(12);
   @include size-bp994(5);
 
-  margin-top: 15px;
-  margin-bottom: 15px;
-
   @include bp768-block {
     margin-top: 0;
     margin-bottom: 0;
   }
-
-  /* background: green; */
-
-  /* text-align: center; */
 }
 
 .snack {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
   @include col;
   @include size(12);
   @include size-bp994(3);
 
-  margin-top: 15px;
-  margin-bottom: 15px;
-
   @include bp768-block {
     margin-top: 0;
     margin-bottom: 0;
   }
-
-  /* background: yellow; */
-
-  /* text-align: center; */
 }
 
 .sport {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
   @include col;
   @include size(12);
   @include size-bp994(4);
 
-  margin-top: 15px;
-  margin-bottom: 15px;
-
   @include bp768-block {
     margin-top: 0;
     margin-bottom: 0;
   }
-
-  /* background: orange; */
 }
 
 .office {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
   @include col;
   @include size(12);
   @include size-bp994(7);
 
-  margin-top: 15px;
-  margin-bottom: 15px;
-
   @include bp768-block {
     margin-top: 0;
     margin-bottom: 0;
   }
-
-  /* background: purple; */
-
-  /* text-align: center; */
 }
 
 .course {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
   @include col;
   @include size(12);
   @include size-bp994(5);
-
-  margin-top: 15px;
-  margin-bottom: 15px;
 
   @include bp768-block {
     margin-top: 0;

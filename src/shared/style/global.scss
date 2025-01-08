@@ -1,0 +1,27 @@
+@forward "./preset/color";
+@forward "./preset/gradient";
+@forward "./preset/shadow";
+@forward "./preset/theme";
+@forward "./preset/var";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent-200);
+  border-radius: 4px;
+}

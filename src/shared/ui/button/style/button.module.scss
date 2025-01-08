@@ -1,8 +1,8 @@
-@import "./button";
-@import "./view";
-@import "./size";
-@import "./icon";
-@import "./iconBox";
-@import "./img";
-@import "./shape";
-@import "./state";
+@forward "./button";
+@forward "./view";
+@forward "./size";
+@forward "./icon";
+@forward "./iconBox";
+@forward "./img";
+@forward "./shape";
+@forward "./state";
