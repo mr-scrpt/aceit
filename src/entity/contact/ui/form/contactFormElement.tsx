@@ -1,6 +1,6 @@
 "use client";
 import { ButtonSubmitComponentType } from "@/shared/type/button.type";
-import { Button } from "@/shared/ui/shadcn/button/button";
+// import { Button } from "@/shared/ui/shadcn/button/button";
 import {
   FormField,
   FormItem,
@@ -26,6 +26,7 @@ import { ContactEmailElement } from "./elements/contactEmail";
 import { ContactFirstNameElement } from "./elements/contactFirstName";
 import { ContactPhoneNumberElement } from "./elements/contactPhoneNumber";
 import { ContactSecondNameElement } from "./elements/contactSecondName";
+import { Button } from "@/shared/ui/button/button";
 
 interface ContactFormElementsProps<T extends ContactFormDefaultValues>
   extends HTMLAttributes<HTMLFormElement> {
@@ -175,7 +176,7 @@ ContactFormElements.SubmitButton = function SubmitButton({
   className,
 }) {
   return (
-    <Button type="submit" disabled={isPending} className={clsx(className)}>
+    <Button type="submit" disabled={true} className={clsx(className)}>
       {isPending && <span>Sending...</span>}
       {submitText}
     </Button>

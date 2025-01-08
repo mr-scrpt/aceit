@@ -31,7 +31,7 @@ export const useContactCreateHandler = (props: ContactFormCreateProps) => {
           ? "http://localhost:2000"
           : window.location.origin;
 
-      const response = await fetch(`${baseUrl}/server/handler.php`, {
+      const response = await fetch(`${baseUrl}/handler.php`, {
         method: "POST",
         body: formData,
       });

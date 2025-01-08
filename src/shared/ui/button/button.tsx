@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
 import { forwardRef } from "react";
 // import { Icon } from "@/shared/component/Icon";
@@ -10,7 +10,7 @@ import { ButtonViewType } from "./domain/view.type";
 import { BUTTON_TO_CLASS } from "./style/button.map";
 import cls from "./style/button.module.scss";
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   classButton?: string;
   classIcon?: string;
   classImg?: string;
@@ -33,10 +33,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       view = "PRIMARY",
       size = "L",
       shape = "MAIN",
+      disabled,
       IconSlotLeft,
       IconSlotRight,
       img,
       alt,
+      type = "button",
       ...rest
     } = props;
 
@@ -44,6 +46,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       [BUTTON_TO_CLASS.size[size]]: true,
       [BUTTON_TO_CLASS.shape[shape]]: true,
       [BUTTON_TO_CLASS.view[view]]: true,
+      [BUTTON_TO_CLASS.state["DISABLED"]]: disabled,
     });
 
     const clsText = clsx(cls.text);
@@ -53,7 +56,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <button
-        type="button"
+        type={type}
         className={clsButton}
         // disabled={disabled}
         ref={ref}

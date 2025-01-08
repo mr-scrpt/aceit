@@ -1,10 +1,12 @@
-.state_disabled.view_primary {
+.state_disabled {
   cursor: not-allowed;
-
-  // backdrop-filter: invert(80%);
   opacity: 0.5;
 
-  &:hover {
-    background-position-x: 50%;
+  &::before {
+    display: none;
+  }
+
+  &:hover::before {
+    opacity: 0;
   }
 }

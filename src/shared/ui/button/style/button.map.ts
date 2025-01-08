@@ -17,4 +17,7 @@ export const BUTTON_TO_CLASS = {
     ROUNDY: cls.shape_roundy,
     FLAT: cls.shape_flat,
   },
+  state: {
+    DISABLED: cls.state_disabled,
+  },
 } as const;
