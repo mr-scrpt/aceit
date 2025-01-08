@@ -9,13 +9,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
+  padding: 0;
+  margin: 0;
+  padding-right: calc(100vw - 100%);
 }
 
 /* Базовые стили для всех элементов */
 .geometri :global(*) {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 :global(:root) {

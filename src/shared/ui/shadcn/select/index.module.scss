@@ -183,7 +183,7 @@
   transition:
     border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
-  color: hsl(from var(--select-color) h s l / 90%);
+  color: hsl(from var(--select-color) h s l / 80%);
 }
 
 .SelectTrigger::placeholder {

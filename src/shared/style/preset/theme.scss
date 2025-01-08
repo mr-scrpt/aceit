@@ -46,14 +46,16 @@
   --date-text: var(--color-accent-200);
 
   /* INPUT */
-  --input-background: var(--color-dark-900);
-  --input-border: var(--color-light-0);
+  --input-background: hsl(from var(--color-dark-900) h s l / 100%);
+  --input-border: hsl(from var(--color-light-0) h s l / 15%);
+  --input-border-hover: hsl(from var(--color-light-0) h s l / 25%);
+  --input-border-focus: hsl(from var(--color-light-0) h s l / 55%);
   --input-color: var(--color-light-0);
   --input-color-placeholder: var(--color-light-0);
 
   /* SELECT */
   --select-background: var(--color-dark-900);
-  --select-border: var(--color-light-0);
+  --select-border: hsl(from var(--color-light-0) h s l / 15%);
   --select-color: var(--color-light-0);
   --select-color-placeholder: var(--color-light-0);
   --select-item-background-hovered: hsl(

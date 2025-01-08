@@ -87,7 +87,7 @@ export const PositionFormElements: PositionFormElementsType = <
 PositionFormElements.FieldPositionSelect = function FieldFirstName(props) {
   const { className } = props;
   const { control } = useFormContext<PositionFormDefaultValues>();
-  console.log("output_log: classNameC =>>>", className);
+  console.log("output_log: className =>>>", className);
 
   return (
     <FormField
