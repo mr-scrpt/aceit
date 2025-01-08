@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start:dev": "next dev --turbopack",
-    "start:build": "next build",
+    "start:build": "next build && cp -r server out/server",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier -w ."
