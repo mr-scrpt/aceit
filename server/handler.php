@@ -42,6 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $email = $_POST['email'] ?? '';
         $position = $_POST['position'] ?? '';
 
+        $mode = $_POST['MODE'] ?? '';
+
         // Проверяем обязательные поля
         if (empty($firstName) || empty($email)) {
             throw new Exception('Не заполнены обязательные поля');
@@ -60,6 +62,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $headers = "From: $email\r\n";
         $headers .= "Reply-To: $email\r\n";
         $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
+
+        if($mode === "dev"){
+            writeLog('INFO', 'Режим разработки');
+            writeLog('INFO', 'Письмо отправлено', [
+                'to' => $to,
+                'subject' => $subject,
+                'from' => $email,
+                'message' => $message
+            ])
+            ;
+            http_response_code(200);
+            echo json_encode([
+                'success' => true,
+                'message' => 'Сообщение успешно отправлено'
+            ]);
+            exit;
+        }
+
 
         if (mail($to, $subject, $message, $headers)) {
             // Логируем успешную отправку

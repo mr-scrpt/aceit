@@ -1,3 +1,4 @@
+import { createFormFields } from "@/shared/lib/form";
 import { z } from "zod";
 
 export const positionDefaultSelectOptionSchema = z.object({
@@ -22,3 +23,6 @@ export type PositionFormDefaultValues<
 export const positionDefaultFieldsValues: PositionFormDefaultValues = {
   positionList: [],
 };
+
+// NOTE: Form fields
+export const POSITION_FORM_FIELDS = createFormFields(positionFormDefaultSchema);

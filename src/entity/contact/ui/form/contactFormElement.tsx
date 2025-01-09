@@ -18,6 +18,7 @@ import {
 } from "react-hook-form";
 import { ZodTypeAny } from "zod";
 import {
+  CONTACT_FORM_FIELDS,
   contactDefaultFieldsValues,
   contactFormDefaultSchema,
   ContactFormDefaultValues,
@@ -101,7 +102,7 @@ ContactFormElements.FieldFirstName = function FieldFirstName(props) {
   return (
     <FormField
       control={control}
-      name="firstName"
+      name={CONTACT_FORM_FIELDS.firstName}
       render={({ field }) => (
         <FormItemCol className={className}>
           <ContactFirstNameElement
@@ -121,7 +122,7 @@ ContactFormElements.FieldSecondName = function FieldSecondName(props) {
   return (
     <FormField
       control={control}
-      name="secondName"
+      name={CONTACT_FORM_FIELDS.secondName}
       render={({ field }) => (
         <FormItemCol className={className}>
           <ContactSecondNameElement
@@ -141,7 +142,7 @@ ContactFormElements.FieldPhoneNumber = function FieldPhoneNumber() {
   return (
     <FormField
       control={control}
-      name="phoneNumber"
+      name={CONTACT_FORM_FIELDS.phoneNumber}
       render={({ field }) => (
         <FormItem>
           <ContactPhoneNumberElement
@@ -161,7 +162,7 @@ ContactFormElements.FieldEmail = function FieldEmail() {
   return (
     <FormField
       control={control}
-      name="email"
+      name={CONTACT_FORM_FIELDS.email}
       render={({ field }) => (
         <FormItem>
           <ContactEmailElement value={field.value} onChange={field.onChange} />
@@ -176,7 +177,7 @@ ContactFormElements.FieldCV = function FieldCV() {
   return (
     <FormField
       control={control}
-      name="cv"
+      name={CONTACT_FORM_FIELDS.cv}
       render={({ field }) => (
         <FormItem>
           <ContactCVElement value={field.value} onChange={field.onChange} />

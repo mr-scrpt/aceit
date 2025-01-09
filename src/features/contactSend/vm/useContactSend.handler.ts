@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { ContactCreateFormValues } from "../domain/form.schema";
+import {
+  CONTACT_CREATE_FORM_FIELDS,
+  ContactCreateFormValues,
+} from "../domain/form.schema";
 import { getApiUrl } from "@/shared/lib/api";
 import { API_ENDPOINTS } from "../api/endpoints.api";
 
@@ -20,20 +23,33 @@ export const useContactCreateHandler = (props: ContactFormCreateProps) => {
     try {
       const formData = new FormData();
 
-      formData.append("firstName", data.firstName);
-      formData.append("secondName", data.secondName);
-      formData.append("phoneNumber", data.phoneNumber);
-      formData.append("email", data.email);
+      // formData.append(CONTACT_CREATE_FORM_FIELDS.firstName, data.firstName);
+      // formData.append(CONTACT_CREATE_FORM_FIELDS.secondName, data.secondName);
+      // formData.append(CONTACT_CREATE_FORM_FIELDS.phoneNumber, data.phoneNumber);
+      // formData.append(CONTACT_CREATE_FORM_FIELDS.email, data.email);
+      //
+      // const position = data.positionList[0].label;
+      // formData.append("position", position);
+      for (const [key, value] of Object.entries(data)) {
+        if (key === CONTACT_CREATE_FORM_FIELDS.positionList) {
+          formData.append("position", value[0].label);
+        }
+        if (process.env.NODE_ENV === "development") {
+          formData.append("MODE", "dev");
+        }
+        formData.append(key, value);
+      }
 
-      const position = data.positionList[0].value;
-      formData.append("position", position);
+      // const position = data.positionList[0].label;
+      // formData.append("position", position);
 
       const endpoint = getApiUrl(API_ENDPOINTS.contact.send);
-      console.log("output_log: ENDPOINT =>>>", endpoint);
       const response = await fetch(endpoint, {
         method: "POST",
         body: formData,
       });
+
+      console.log("output_log: RESPONSE::::::: =>>>", response);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

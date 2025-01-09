@@ -1,11 +1,33 @@
-[2025-01-09 09:40:33] [INFO] Получены новые данные формы
+[2025-01-09 10:07:33] [INFO] Получены новые данные формы
 Data: Array
 (
+    [MODE] => dev
     [firstName] => ddd
     [secondName] => fdfd
     [phoneNumber] => 5555
     [email] => dolcegabbana2010@gmail.com
-    [position] => 3
+    [cv] => null
+    [position] => Content Manager
+    [positionList] => [object Object]
+)
+
+------------------------------------------------
+[2025-01-09 10:07:33] [INFO] Режим разработки
+------------------------------------------------
+[2025-01-09 10:07:33] [INFO] Письмо отправлено
+Data: Array
+(
+    [to] => dolcegabbana2010@gmail.com
+    [subject] => Новая заявка с сайта
+    [from] => dolcegabbana2010@gmail.com
+    [message] => Новая заявка:
+
+Имя: ddd
+Фамилия: fdfd
+Телефон: 5555
+Email: dolcegabbana2010@gmail.com
+Позиция: Content Manager
+
 )
 
 ------------------------------------------------

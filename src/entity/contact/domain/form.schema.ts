@@ -1,3 +1,4 @@
+import { createFormFields } from "@/shared/lib/form";
 import { z } from "zod";
 
 // NOTE: FORM
@@ -14,7 +15,7 @@ export type ContactFormDefaultValues<
   T extends z.ZodTypeAny = typeof contactFormDefaultSchema,
 > = z.infer<T>;
 
-// TODO: DefaultValues
+// NOTE: DefaultValues
 export const contactDefaultFieldsValues: ContactFormDefaultValues = {
   firstName: "",
   secondName: "",
@@ -22,3 +23,6 @@ export const contactDefaultFieldsValues: ContactFormDefaultValues = {
   email: "",
   cv: null,
 };
+
+// NOTE: Form fields
+export const CONTACT_FORM_FIELDS = createFormFields(contactFormDefaultSchema);

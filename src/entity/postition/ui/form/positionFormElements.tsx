@@ -17,6 +17,7 @@ import {
 } from "react-hook-form";
 import { ZodTypeAny } from "zod";
 import {
+  POSITION_FORM_FIELDS,
   positionDefaultFieldsValues,
   positionFormDefaultSchema,
   PositionFormDefaultValues,
@@ -64,7 +65,7 @@ export const PositionFormElements: PositionFormElementsType = <
     resolver: zodResolver(schema ?? positionFormDefaultSchema),
     defaultValues: { ...getDefaultFormValues<T>(defaultValues) },
   });
-  console.log("output_log: VALUES =>>>", form.getValues());
+  // console.log("output_log: VALUES =>>>", form.getValues());
 
   useEffect(() => {
     form.reset(getDefaultFormValues<T>(defaultValues));
@@ -87,12 +88,11 @@ export const PositionFormElements: PositionFormElementsType = <
 PositionFormElements.FieldPositionSelect = function FieldFirstName(props) {
   const { className } = props;
   const { control } = useFormContext<PositionFormDefaultValues>();
-  console.log("output_log: className =>>>", className);
 
   return (
     <FormField
       control={control}
-      name="positionList"
+      name={POSITION_FORM_FIELDS.positionList}
       render={({ field }) => (
         <FormItemCol className={className}>
           <PositionSelectElement
