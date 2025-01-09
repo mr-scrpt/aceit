@@ -13,7 +13,7 @@
     box-shadow 0.15s ease-in-out;
   color: hsl(from var(--input-color) h s l / 90%);
   font-weight: 500;
-  max-width: 30rem;
+  max-width: 34rem;
 
   &:hover {
     border-color: var(--input-border-hover);

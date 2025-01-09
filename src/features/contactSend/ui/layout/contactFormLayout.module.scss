@@ -18,3 +18,17 @@
 .col {
   width: calc(50% - 7.5px);
 }
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.dropZone {
+  flex-grow: 1;
+}
+
+.button {
+}

@@ -48,7 +48,7 @@ type ContactFormFields = {
   FieldSecondName: FC<HTMLAttributes<HTMLDivElement>>;
   FieldPhoneNumber: FC;
   FieldEmail: FC;
-  FieldCV: FC;
+  FieldCV: FC<HTMLAttributes<HTMLDivElement>>;
   SubmitButton: ButtonSubmitComponentType;
 };
 
@@ -174,14 +174,15 @@ ContactFormElements.FieldEmail = function FieldEmail() {
   );
 };
 
-ContactFormElements.FieldCV = function FieldCV() {
+ContactFormElements.FieldCV = function FieldCV(props) {
+  const { className } = props;
   const { control } = useFormContext<ContactFormDefaultValues>();
   return (
     <FormField
       control={control}
       name={CONTACT_FORM_FIELDS.cv}
       render={({ field }) => (
-        <FormItem>
+        <FormItem className={className}>
           <ContactCVElement value={field.value} onChange={field.onChange} />
           <FormMessage />
         </FormItem>
@@ -196,7 +197,13 @@ ContactFormElements.SubmitButton = function SubmitButton({
   className,
 }) {
   return (
-    <Button type="submit" disabled={true} className={clsx(className)}>
+    <Button
+      type="submit"
+      view="PRIMARY"
+      disabled={isPending}
+      size="XL"
+      className={clsx(className)}
+    >
       {isPending && <span>Sending...</span>}
       {submitText}
     </Button>

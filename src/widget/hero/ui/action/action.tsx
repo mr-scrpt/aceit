@@ -9,13 +9,13 @@ export const Action: FC<ActionProps> = (props) => {
   return (
     <div className={sAction.action}>
       <div className={sAction.inner}>
-        <Button view="PRIMARY" size="L">
+        <Button view="PRIMARY" size="XL">
           Open Position
         </Button>
 
         <Button
           view="TRANSPARENT"
-          size="L"
+          size="XL"
           shape="ROUNDY"
           className={sAction.buttonMeet}
           IconSlotRight={(clsIcon) => (

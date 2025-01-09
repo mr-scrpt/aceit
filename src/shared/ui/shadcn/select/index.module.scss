@@ -175,7 +175,7 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 0.375rem;
-  border: 1px solid hsl(from var(--select-border) h s l / 15%);
+  border: 1px solid var(--select-border);
   background-color: hsl(from var(--select-background) h s l);
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
@@ -311,6 +311,7 @@
 
 /* Slide-in animations based on side */
 .SelectContent[data-side="bottom"] {
+  top: 5px;
   animation-name: slide-in-from-top;
 }
 

@@ -45,11 +45,15 @@ export const ContactFormSendModule: FC<ContactFormCreateProps> = (props) => {
         <ContactFormElements.FieldPhoneNumber />
         <ContactFormElements.FieldEmail />
         <PositionFormElements.FieldPositionSelect />
-        <ContactFormElements.FieldCV />
-        <ContactFormElements.SubmitButton
-          isPending={isPendingCreate}
-          submitText={"Send"}
-        />
+        <div className={sContactFormSendLayout.footer}>
+          <ContactFormElements.FieldCV
+            className={sContactFormSendLayout.dropZone}
+          />
+          <ContactFormElements.SubmitButton
+            isPending={isPendingCreate}
+            submitText={"Send"}
+          />
+        </div>
       </ContactFormElements>
     </div>
   );
