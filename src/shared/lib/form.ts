@@ -119,13 +119,55 @@ export function createFormDataFromSchema<T extends Record<string, any>>(
 //     message: "Необходимо загрузить файл в формате PDF, DOC или DOCX",
 //   },
 // );
+// export const fileSchema = z
+//   .custom<File | null>()
+//   .refine(
+//     (file): file is File => {
+//       if (!file || !(file instanceof File)) {
+//         return false;
+//       }
+//       const allowedTypes = [
+//         "application/pdf",
+//         "application/msword",
+//         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+//       ];
+//       return allowedTypes.includes(file.type);
+//     },
+//     {
+//       message: "Необходимо загрузить резюме в формате PDF, DOC или DOCX",
+//     },
+//   )
+//   .nullable()
+//   .transform((value, ctx) => {
+//     if (value === null) {
+//       ctx.addIssue({
+//         code: "custom",
+//         message: "Необходимо загрузить файл",
+//       });
+//     }
+//     return value;
+//   });
 export const fileSchema = z
   .custom<File | null>()
+  // Проверяем, что файл существует и является File
+  .refine((file): file is File => file instanceof File, {
+    message: "Необходимо загрузить файл",
+  })
+  // Проверяем размер файла
   .refine(
-    (file): file is File => {
-      if (!file || !(file instanceof File)) {
-        return false;
-      }
+    (file) => {
+      if (!(file instanceof File)) return false;
+      const maxSize = 7 * 1024 * 1024; // 7MB
+      return file.size <= maxSize;
+    },
+    {
+      message: "Размер файла не должен превышать 7MB",
+    },
+  )
+  // Проверяем тип файла
+  .refine(
+    (file) => {
+      if (!(file instanceof File)) return false;
       const allowedTypes = [
         "application/pdf",
         "application/msword",
@@ -134,7 +176,7 @@ export const fileSchema = z
       return allowedTypes.includes(file.type);
     },
     {
-      message: "Необходимо загрузить резюме в формате PDF, DOC или DOCX",
+      message: "Файл должен быть в формате PDF, DOC или DOCX",
     },
   )
   .nullable()

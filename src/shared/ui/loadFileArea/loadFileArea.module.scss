@@ -1,0 +1,93 @@
+.loadFileArea {
+  width: 100%;
+}
+
+.inner {
+  position: relative;
+  border: 2px dashed #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: #9ca3af;
+  }
+
+  &.dragging {
+    border-color: #60a5fa;
+    background-color: rgb(96 165 250 / 10%);
+  }
+
+  &.error {
+    border-color: #ef4444;
+    background-color: rgb(239 68 68 / 10%);
+  }
+
+  &.hasFile {
+    border-color: #10b981;
+    background-color: rgb(16 185 129 / 10%);
+  }
+}
+
+.input {
+  display: none;
+}
+
+.area {
+  padding: 24px;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+
+  &.errorText {
+    color: #ef4444;
+  }
+}
+
+.hint {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.fileName {
+  font-size: 14px;
+  color: #10b981;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.removeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+
+  &:hover {
+    background-color: rgb(0 0 0 / 5%);
+    color: #374151;
+  }
+}
+
+.successIcon {
+  color: #10b981;
+}
+
+.errorIcon {
+  color: #ef4444;
+}
