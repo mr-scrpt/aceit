@@ -5,6 +5,7 @@ export type Contact = {
   phoneNumber: string;
   email: string;
   position: string;
+  cv: File;
 };
 
 // // NOTE: Entity

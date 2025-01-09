@@ -1,2 +1,11 @@
-[2025-01-08 14:45:55] [INFO] GET request received
+[2025-01-09 09:40:33] [INFO] Получены новые данные формы
+Data: Array
+(
+    [firstName] => ddd
+    [secondName] => fdfd
+    [phoneNumber] => 5555
+    [email] => dolcegabbana2010@gmail.com
+    [position] => 3
+)
+
 ------------------------------------------------

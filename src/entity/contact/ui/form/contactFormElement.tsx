@@ -27,6 +27,7 @@ import { ContactFirstNameElement } from "./elements/contactFirstName";
 import { ContactPhoneNumberElement } from "./elements/contactPhoneNumber";
 import { ContactSecondNameElement } from "./elements/contactSecondName";
 import { Button } from "@/shared/ui/button/button";
+import { ContactCVElement } from "./elements/contactCV";
 
 interface ContactFormElementsProps<T extends ContactFormDefaultValues>
   extends HTMLAttributes<HTMLFormElement> {
@@ -46,6 +47,7 @@ type ContactFormFields = {
   FieldSecondName: FC<HTMLAttributes<HTMLDivElement>>;
   FieldPhoneNumber: FC;
   FieldEmail: FC;
+  FieldCV: FC;
   SubmitButton: ButtonSubmitComponentType;
 };
 
@@ -163,6 +165,21 @@ ContactFormElements.FieldEmail = function FieldEmail() {
       render={({ field }) => (
         <FormItem>
           <ContactEmailElement value={field.value} onChange={field.onChange} />
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+};
+ContactFormElements.FieldCV = function FieldCV() {
+  const { control } = useFormContext<ContactFormDefaultValues>();
+  return (
+    <FormField
+      control={control}
+      name="cv"
+      render={({ field }) => (
+        <FormItem>
+          <ContactCVElement value={field.value} onChange={field.onChange} />
           <FormMessage />
         </FormItem>
       )}

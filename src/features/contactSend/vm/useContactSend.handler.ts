@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { ContactCreateFormValues } from "../domain/form.schema";
+import { getApiUrl } from "@/shared/lib/api";
+import { API_ENDPOINTS } from "../api/endpoints.api";
 
 interface ContactFormCreateProps {
   onSuccess?: () => void;
@@ -26,12 +28,9 @@ export const useContactCreateHandler = (props: ContactFormCreateProps) => {
       const position = data.positionList[0].value;
       formData.append("position", position);
 
-      const baseUrl =
-        process.env.NODE_ENV === "development"
-          ? "http://localhost:2000"
-          : window.location.origin;
-
-      const response = await fetch(`${baseUrl}/handler.php`, {
+      const endpoint = getApiUrl(API_ENDPOINTS.contact.send);
+      console.log("output_log: ENDPOINT =>>>", endpoint);
+      const response = await fetch(endpoint, {
         method: "POST",
         body: formData,
       });

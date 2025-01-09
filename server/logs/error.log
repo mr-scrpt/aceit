@@ -1,0 +1,17 @@
+[2025-01-09 09:40:33] [ERROR] Ошибка при отправке письма
+Data: Array
+(
+    [error] => Ошибка при отправке письма
+    [trace] => #0 {main}
+    [post_data] => Array
+        (
+            [firstName] => ddd
+            [secondName] => fdfd
+            [phoneNumber] => 5555
+            [email] => dolcegabbana2010@gmail.com
+            [position] => 3
+        )
+
+)
+
+------------------------------------------------

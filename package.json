@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start:dev": "next dev --turbopack",
-    "start:build": "next build && cp -r server out/server",
+    "start:dev": "cross-env NEXT_PUBLIC_APP_ENV=development next dev --turbopack",
+    "start:build": "cross-env NEXT_PUBLIC_APP_ENV=production next build && cp -r server build/server",
     "start:server": "php -S localhost:8080 -t server/",
     "start": "next start",
     "lint": "next lint",

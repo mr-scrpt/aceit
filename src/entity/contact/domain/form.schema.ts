@@ -7,6 +7,7 @@ export const contactFormDefaultSchema = z.object({
   secondName: z.string().nonempty(),
   phoneNumber: z.string().nonempty(),
   email: z.string().email(),
+  cv: z.any().optional(),
 });
 
 export type ContactFormDefaultValues<
@@ -19,4 +20,5 @@ export const contactDefaultFieldsValues: ContactFormDefaultValues = {
   secondName: "",
   phoneNumber: "",
   email: "",
+  cv: null,
 };

@@ -45,6 +45,7 @@ export const ContactFormSendModule: FC<ContactFormCreateProps> = (props) => {
         <ContactFormElements.FieldPhoneNumber />
         <ContactFormElements.FieldEmail />
         <PositionFormElements.FieldPositionSelect />
+        <ContactFormElements.FieldCV />
         <ContactFormElements.SubmitButton
           isPending={isPendingCreate}
           submitText={"Send"}
