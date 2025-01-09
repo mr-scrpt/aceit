@@ -4,6 +4,7 @@
   --background: var(--color-dark-950);
   --foreground: var(--color-light-0);
   --text-light: var(--color-light-0);
+  --text-passive: hsl(from var(--color-light-0) h s l / 30%);
   --link: var(--color-light-0);
   --scrollbar: hsl(from var(--color-accent-200) h s l / 60%);
 
@@ -62,4 +63,11 @@
     from var(--color-accent-200) h s l / 30%
   );
   --select-item-color-hovered: var(--color-accent-400);
+
+  /* DROP ZONE */
+  --dropZone-icon-default: var(--color-action-500);
+  --dropZone-border-default: hsl(from var(--color-light-0) h s l / 15%);
+  --dropZone-main-dragging: var(--color-neutral-500);
+  --dropZone-main-error: var(--color-error-500);
+  --dropZone-main-success: var(--color-success-500);
 }
