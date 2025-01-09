@@ -92,7 +92,7 @@ PositionFormElements.FieldPositionSelect = function FieldFirstName(props) {
   return (
     <FormField
       control={control}
-      name={POSITION_FORM_FIELDS.positionList}
+      name={POSITION_FORM_FIELDS.positionList!}
       render={({ field }) => (
         <FormItemCol className={className}>
           <PositionSelectElement

@@ -76,6 +76,7 @@ export const ContactFormElements: ContactFormElementsType = <
   });
 
   console.log("output_log: VALUES =>>>", form.getValues());
+  console.log("output_log: ERRORS =>>>", form.formState.errors);
 
   useEffect(() => {
     form.reset(getDefaultFormValues<T>(defaultValues));

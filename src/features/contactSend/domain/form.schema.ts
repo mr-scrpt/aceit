@@ -16,6 +16,7 @@ export const contactCreateDefaultFieldsValues: ContactCreateFormValues = {
   phoneNumber: "",
   email: "",
   positionList: [],
+  cv: null,
 };
 export const CONTACT_CREATE_FORM_FIELDS = createFormFields(
   contactCreateFormSchema,

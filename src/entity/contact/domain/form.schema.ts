@@ -1,4 +1,4 @@
-import { createFormFields } from "@/shared/lib/form";
+import { createFormFields, fileSchema } from "@/shared/lib/form";
 import { z } from "zod";
 
 // NOTE: FORM
@@ -8,7 +8,7 @@ export const contactFormDefaultSchema = z.object({
   secondName: z.string().nonempty(),
   phoneNumber: z.string().nonempty(),
   email: z.string().email(),
-  cv: z.any().optional(),
+  cv: fileSchema,
 });
 
 export type ContactFormDefaultValues<
