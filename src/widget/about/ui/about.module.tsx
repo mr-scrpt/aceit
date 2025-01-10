@@ -6,6 +6,7 @@ import { Snack } from "./snack/snack";
 import { Sport } from "./sport/sport";
 import { Office } from "./office/office";
 import { Course } from "./course/course";
+import { MENU_DATA } from "@/shared/ui/menu/model/menu.data";
 
 interface AboutModuleProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -19,6 +20,7 @@ export const AboutModule: FC<AboutModuleProps> = (props) => {
       SportSlot={<Sport />}
       OfficeSlot={<Office />}
       CourseSlot={<Course />}
+      anchor={MENU_DATA.about.href}
     />
   );
 };

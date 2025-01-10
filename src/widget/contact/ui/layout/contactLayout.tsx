@@ -6,12 +6,13 @@ import sContactLayout from "./contactLayout.module.scss";
 interface ContactLayoutProps extends HTMLAttributes<HTMLDivElement> {
   PresentationSlot: ReactNode;
   FormSlot: ReactNode;
+  anchor?: string;
 }
 
 export const ContactLayout: FC<ContactLayoutProps> = (props) => {
-  const { PresentationSlot, FormSlot } = props;
+  const { PresentationSlot, FormSlot, anchor } = props;
   return (
-    <section className={clsx(sLayout.wrapper)}>
+    <section className={clsx(sLayout.wrapper)} id={anchor}>
       <div
         className={clsx(
           sContactLayout.inner,

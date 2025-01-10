@@ -12,6 +12,7 @@ interface AboutLayoutProps extends HTMLAttributes<HTMLDivElement> {
   SportSlot: ReactNode;
   OfficeSlot: ReactNode;
   CourseSlot: ReactNode;
+  anchor?: string;
 }
 
 export const AboutLayout: FC<AboutLayoutProps> = (props) => {
@@ -23,9 +24,10 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
     SportSlot,
     OfficeSlot,
     CourseSlot,
+    anchor,
   } = props;
   return (
-    <section className={sLayout.wrapper}>
+    <section className={sLayout.wrapper} id={anchor}>
       <div className={sAboutLayout.inner}>
         <div className={sAboutLayout.row}>
           <div className={clsx(sAboutLayout.text, sPage.card)}>{TextSlot}</div>

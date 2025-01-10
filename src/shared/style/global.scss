@@ -10,6 +10,7 @@
   margin: 0;
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar) transparent;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
