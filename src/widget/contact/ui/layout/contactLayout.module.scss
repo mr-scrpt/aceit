@@ -1,6 +1,12 @@
 @use "@/shared/style" as *;
 
+.contactLayout {
+  position: relative;
+  overflow: hidden;
+}
+
 .inner {
+  position: relative;
   padding: 22px 32px;
 
   @include bp994-block {
@@ -42,5 +48,13 @@
 
   @include bp994-block {
     /* padding: 40px 80px; */
+  }
+}
+
+.deco {
+  display: none;
+
+  @include bp994-block {
+    display: block;
   }
 }

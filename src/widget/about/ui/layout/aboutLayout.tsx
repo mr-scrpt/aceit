@@ -71,7 +71,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
             )}
           >
             {SportSlot}
-            <div className={sDeco.sectionBackgroundImgCircle}></div>
+            <div className={sDeco.sectionBackgroundImgCircleRightTop}></div>
             <div className={sDeco.sectionBackgroundImgBallRightTop}></div>
             <div className={sDeco.sectionBackgroundImgBallRightMiddle}></div>
             <div className={sDeco.sectionBackgroundImgBallLeftMiddle}></div>

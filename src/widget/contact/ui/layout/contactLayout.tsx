@@ -11,7 +11,7 @@ interface ContactLayoutProps extends HTMLAttributes<HTMLDivElement> {
 export const ContactLayout: FC<ContactLayoutProps> = (props) => {
   const { PresentationSlot, FormSlot } = props;
   return (
-    <section className={clsx(sLayout.wrapper, sContactLayout.contact)}>
+    <section className={clsx(sLayout.wrapper)}>
       <div
         className={clsx(
           sContactLayout.inner,
@@ -25,6 +25,15 @@ export const ContactLayout: FC<ContactLayoutProps> = (props) => {
           </div>
           <div className={clsx(sContactLayout.form)}>{FormSlot}</div>
         </div>
+        <div
+          className={clsx(sDeco.sectionGradientLeftBottom, sContactLayout.deco)}
+        ></div>
+        <div
+          className={clsx(
+            sDeco.sectionBackgroundImgCircleLeftBottom,
+            sContactLayout.deco,
+          )}
+        ></div>
       </div>
     </section>
   );
