@@ -6,4 +6,6 @@ export const ICON_TO_CLASS = {
   CALENDAR: cls.calendar,
   FILE_PLUS: cls.file_plus,
   CLOCK: cls.clock,
+  LOCATION: cls.location,
+  PROFILE: cls.profile,
 };

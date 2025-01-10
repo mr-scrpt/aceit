@@ -4,6 +4,8 @@ export const ICON_LIST = {
   CALENDAR: "calendar",
   FILE_PLUS: "file_plus",
   CLOCK: "clock",
+  LOCATION: "location",
+  PROFILE: "profile",
 } as const;
 
 export type IconListType = keyof typeof ICON_LIST;

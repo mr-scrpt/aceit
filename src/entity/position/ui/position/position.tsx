@@ -11,6 +11,7 @@ import { Title } from "@/shared/ui/title/title";
 import { Tag } from "@/shared/ui/tag";
 import { Paragraph } from "@/shared/ui/paragraph/ui/paragraph";
 import { List } from "@/shared/ui/list/ui/list";
+import { DataRow } from "../dataRow/dataRow";
 
 interface PositionProps extends HTMLAttributes<HTMLDivElement> {
   position: PositionType;
@@ -121,9 +122,12 @@ Position.EmploymentType = function PositionEmploymentType(
   const { className } = props;
   const { position } = usePositionContext();
   return (
-    <Title className={clsx(sPosition.title, [className])}>
-      {position.position}
-    </Title>
+    <DataRow
+      contentData={position.employmentType}
+      className={clsx(sPosition.dataRow, [className])}
+      iconName="CLOCK"
+      separator="/"
+    />
   );
 };
 
@@ -134,9 +138,12 @@ Position.Location = function PositionLocation(props: PositionLocationProps) {
   const { className } = props;
   const { position } = usePositionContext();
   return (
-    <Title className={clsx(sPosition.title, [className])}>
-      {position.position}
-    </Title>
+    <DataRow
+      contentData={position.location}
+      className={clsx(sPosition.dataRow, [className])}
+      iconName="LOCATION"
+      separator="/"
+    />
   );
 };
 
@@ -147,9 +154,12 @@ Position.Level = function PositionLevel(props: PositionLevelProps) {
   const { className } = props;
   const { position } = usePositionContext();
   return (
-    <Title className={clsx(sPosition.title, [className])}>
-      {position.position}
-    </Title>
+    <DataRow
+      contentData={position.level}
+      className={clsx(sPosition.dataRow, [className])}
+      iconName="PROFILE"
+      separator=","
+    />
   );
 };
 

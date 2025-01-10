@@ -1,7 +1,7 @@
 "use client";
 import { FC, HTMLAttributes } from "react";
 import { PositionLayout } from "./layout/positionLayout";
-import { usePositonData } from "@/entity/postition";
+import { usePositonData } from "@/entity/position";
 
 interface PositionModuleProps extends HTMLAttributes<HTMLDivElement> {
   positionId: string;

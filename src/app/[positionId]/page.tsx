@@ -1,4 +1,4 @@
-import { POSITION_LIST } from "@/entity/postition/model/position.model";
+import { POSITION_LIST } from "@/entity/position/model/position.model";
 import { PositionModule } from "@/widget/position";
 import { FC } from "react";
 

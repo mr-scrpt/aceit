@@ -205,17 +205,12 @@
   }
 }
 
-.sectionBorder {
-  &::before {
-    border-radius: var(--radius-l);
-  }
-}
-
 .sectionGradientBorder {
   &::before {
     content: "";
     position: absolute;
     inset: 0;
+    border-radius: var(--radius-l);
 
     /* border-radius: 28px; */
     padding: 2px;
@@ -234,8 +229,7 @@
     content: "";
     position: absolute;
     inset: 0;
-
-    /* border-radius: 28px; */
+    border-radius: var(--radius-l);
     padding: 2px;
     background: var(--gradient-light-to-transparent-to-light);
     mask:

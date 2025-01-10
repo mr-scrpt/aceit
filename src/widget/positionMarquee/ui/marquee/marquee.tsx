@@ -7,7 +7,7 @@ import {
   APPEARANCE,
   ColoredItem,
 } from "../../domain/postionMarquee.type";
-import { usePositionNameListModel } from "@/entity/postition";
+import { usePositionNameListModel } from "@/entity/position";
 
 export const Marquee: FC<MarqueeProps> = ({ className }) => {
   const { positionNameList } = usePositionNameListModel();

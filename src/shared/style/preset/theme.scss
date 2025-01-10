@@ -7,6 +7,7 @@
   --text-passive: hsl(from var(--color-light-0) h s l / 30%);
   --link: var(--color-light-0);
   --scrollbar: hsl(from var(--color-accent-200) h s l / 60%);
+  --icon-base: hsl(from var(--color-light-0) h s l / 80%);
 
   /* BUTTON */
   // primary
@@ -23,7 +24,7 @@
   --button-transparent-background-hover: var(--color-accent-800);
   --button-transparent-border: var(--shadow-purple-border);
 
-  // icon
+  // icon button
   --button-icon-text: var(--color-light-0);
   --button-icon-background: transparent;
   --button-icon-border: var(--shadow-purple-border);

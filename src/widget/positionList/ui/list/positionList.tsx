@@ -1,4 +1,4 @@
-import { PositionSnippet, usePositionListModel } from "@/entity/postition";
+import { PositionSnippet, usePositionListModel } from "@/entity/position";
 import { sDeco, sPage } from "@/shared/style";
 import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
@@ -21,7 +21,6 @@ export const List: FC<PositionListProps> = (props) => {
                 sPage.card,
                 sDeco.sectionGradientBorderAndHover,
                 sDeco.sectionGradientPrimary,
-                sDeco.sectionBorder,
               )}
             />
           ))}

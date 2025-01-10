@@ -1,5 +1,5 @@
 import { contactFormDefaultSchema } from "@/entity/contact";
-import { positionDefaultSelectOptionSchema } from "@/entity/postition/domain/position.schema";
+import { positionDefaultSelectOptionSchema } from "@/entity/position/domain/position.schema";
 import { createFormFields } from "@/shared/lib/form";
 import { z } from "zod";
 

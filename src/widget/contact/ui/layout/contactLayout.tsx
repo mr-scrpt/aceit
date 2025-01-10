@@ -18,7 +18,6 @@ export const ContactLayout: FC<ContactLayoutProps> = (props) => {
           sContactLayout.inner,
           sPage.card,
           sDeco.sectionGradientBorder,
-          sDeco.sectionBorder,
         )}
       >
         <div className={clsx(sContactLayout.row)}>

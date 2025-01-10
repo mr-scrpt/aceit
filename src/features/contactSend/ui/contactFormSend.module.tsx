@@ -8,7 +8,7 @@ import {
   ContactCreateFormValues,
 } from "../domain/form.schema";
 import { useContactCreateHandler } from "../vm/useContactSend.handler";
-import { PositionFormElements } from "@/entity/postition";
+import { PositionFormElements } from "@/entity/position";
 import sContactFormSendLayout from "./layout/contactFormLayout.module.scss";
 
 interface ContactFormCreateProps extends HTMLAttributes<HTMLDivElement> {
