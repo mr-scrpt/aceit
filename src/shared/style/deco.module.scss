@@ -32,6 +32,24 @@
   }
 }
 
+.spotSection {
+  position: relative;
+
+  &::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    width: min(950px, 90%);
+    aspect-ratio: 950 / 280;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: var(--gradient-radial-primary);
+    z-index: -1;
+    filter: blur(clamp(200px, 30vw, 400px));
+  }
+}
+
 .textGradientPrimary {
   /* purple-gradient */
   background: var(--text-gradient-primary);

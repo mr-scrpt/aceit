@@ -20,6 +20,7 @@ export const List: FC<PositionListProps> = (props) => {
                 sList.item,
                 sPage.card,
                 sDeco.sectionGradientBorderAndHover,
+                sDeco.sectionGradientPrimary,
               )}
             />
           ))}
