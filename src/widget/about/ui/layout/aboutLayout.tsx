@@ -36,6 +36,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
               sPage.card,
               sAboutLayout.people,
               sDeco.sectionGradientBorder,
+              sDeco.sectionBorder,
             )}
           >
             {PeopleSlot}
@@ -50,6 +51,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
               sPage.card,
               sDeco.sectionGradientPrimary,
               sDeco.sectionGradientBorder,
+              sDeco.sectionBorder,
             )}
           >
             {WorkSlot}
@@ -60,6 +62,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
               sPage.card,
               sDeco.sectionGradientFillAndSpot,
               sDeco.sectionGradientBorder,
+              sDeco.sectionBorder,
             )}
           >
             {SnackSlot}
@@ -70,6 +73,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
               sPage.card,
               sDeco.sectionGradientPrimary,
               sDeco.sectionGradientBorder,
+              sDeco.sectionBorder,
             )}
           >
             {SportSlot}
@@ -86,6 +90,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
               sPage.card,
               sDeco.sectionGradientPrimary,
               sDeco.sectionGradientBorder,
+              sDeco.sectionBorder,
             )}
           >
             {OfficeSlot}
@@ -96,6 +101,7 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
               sPage.card,
               sDeco.sectionGradientPrimary,
               sDeco.sectionGradientBorder,
+              sDeco.sectionBorder,
             )}
           >
             {CourseSlot}

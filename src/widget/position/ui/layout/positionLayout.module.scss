@@ -1,0 +1,10 @@
+@use "@/shared/style" as *;
+
+.positionLayout {
+}
+
+.inner {
+  @include row-flex;
+
+  gap: 20px;
+}

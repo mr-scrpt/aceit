@@ -1,3 +1,4 @@
+"use client";
 import { FC, HTMLAttributes } from "react";
 import { ContactLayout } from "./layout/contactLayout";
 import { Presentation } from "./presentation/presentation";

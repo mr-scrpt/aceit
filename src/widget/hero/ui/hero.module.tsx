@@ -1,3 +1,4 @@
+"use client";
 import { FC, HTMLAttributes } from "react";
 import { HeroLayout } from "./layout/heroLayout";
 import { Banner } from "./banner/banner";

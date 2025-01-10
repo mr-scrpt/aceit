@@ -1,3 +1,4 @@
+"use client";
 import { Title } from "@/shared/ui/title/title";
 import { FC, HTMLAttributes } from "react";
 import { PositionListLayout } from "./layout/positionListLayout";

@@ -2,7 +2,7 @@ export const POSITION_LIST: PositionType[] = [
   {
     id: 1,
     position: "Affiliate Manager",
-    postingDate: "2023-02-15",
+    datePosted: "2023-02-15",
     about:
       "We are looking for: a candidate with strong English and communicative skills to work with webmasters in order to extend and maintain new traffic sources.",
     responsibilities: [
@@ -27,7 +27,7 @@ export const POSITION_LIST: PositionType[] = [
   {
     id: 2,
     position: "Content Manager",
-    postingDate: "2023-03-12",
+    datePosted: "2023-03-12",
     about:
       "We are looking for a highly organized Content Manager to create, edit, and maintain high-quality content across our digital platforms.",
     responsibilities: [
@@ -51,7 +51,7 @@ export const POSITION_LIST: PositionType[] = [
   {
     id: 3,
     position: "BI Engineer",
-    postingDate: "2023-03-18",
+    datePosted: "2023-03-18",
     about:
       "We are seeking a BI Engineer to design and implement business intelligence solutions that help drive data-driven decision-making.",
     responsibilities: [
@@ -75,7 +75,7 @@ export const POSITION_LIST: PositionType[] = [
   {
     id: 4,
     position: "Vip Manager",
-    postingDate: "2023-04-01",
+    datePosted: "2023-04-01",
     about:
       "We are looking for a VIP Manager to enhance relationships with our high-value clients and provide exceptional service.",
     responsibilities: [
@@ -99,7 +99,7 @@ export const POSITION_LIST: PositionType[] = [
   {
     id: 5,
     position: "Promo Manager",
-    postingDate: "2023-04-10",
+    datePosted: "2023-04-10",
     about:
       "We are searching for a Promo Manager to plan, execute, and analyze promotional campaigns to drive user engagement and revenue growth.",
     responsibilities: [
@@ -123,7 +123,7 @@ export const POSITION_LIST: PositionType[] = [
   {
     id: 6,
     position: "Graphic Designer",
-    postingDate: "2023-04-20",
+    datePosted: "2023-04-20",
     about:
       "We are hiring a creative Graphic Designer to produce high-quality visual content that aligns with our brand and marketing goals.",
     responsibilities: [

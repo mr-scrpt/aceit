@@ -1,3 +1,4 @@
+"use client";
 import { FC, HTMLAttributes } from "react";
 import { PositionMerqueeLayout } from "./layout/positionMerqueeLayout";
 import { Marquee } from "./marquee/marquee";

@@ -3,6 +3,7 @@ export const ICON_LIST = {
   ARROW_TILE: "arrow_tile",
   CALENDAR: "calendar",
   FILE_PLUS: "file_plus",
+  CLOCK: "clock",
 } as const;
 
 export type IconListType = keyof typeof ICON_LIST;

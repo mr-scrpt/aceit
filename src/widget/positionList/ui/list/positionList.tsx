@@ -21,6 +21,7 @@ export const List: FC<PositionListProps> = (props) => {
                 sPage.card,
                 sDeco.sectionGradientBorderAndHover,
                 sDeco.sectionGradientPrimary,
+                sDeco.sectionBorder,
               )}
             />
           ))}

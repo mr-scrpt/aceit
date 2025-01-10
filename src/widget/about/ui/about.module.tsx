@@ -1,3 +1,4 @@
+"use client";
 import { FC, HTMLAttributes } from "react";
 import { AboutLayout } from "./layout/aboutLayout";
 import { Text } from "./text/text";
