@@ -1,10 +1,14 @@
 @use "@/shared/style" as *;
 
 .inner {
-  padding: 10px 0 30px;
+  padding: 22px 32px;
 
   @include bp994-block {
-    padding: 10px 0 130px;
+    padding: 40px 60px;
+  }
+
+  @include bp1100-block {
+    padding: 80px 100px;
   }
 }
 
@@ -20,22 +24,23 @@
 
   @include bp994-block {
     display: flex;
-    padding: 40px 80px;
+
+    /* padding: 40px 80px; */
   }
 
   @include bp1100-block {
-    padding: 80px 115px;
+    /* padding: 80px 115px; */
   }
 }
 
 .form {
-  padding: 30px;
+  /* padding: 30px; */
 
   @include col;
   @include size(12);
   @include size-bp994(6);
 
   @include bp994-block {
-    padding: 40px 80px;
+    /* padding: 40px 80px; */
   }
 }
