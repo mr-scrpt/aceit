@@ -8,6 +8,7 @@
 .inner {
   position: relative;
   padding: 22px 32px;
+  margin-bottom: 40px;
 
   @include bp994-block {
     padding: 40px 60px;
