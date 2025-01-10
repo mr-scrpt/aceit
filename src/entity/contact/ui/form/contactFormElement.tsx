@@ -29,6 +29,7 @@ import { ContactPhoneNumberElement } from "./elements/contactPhoneNumber";
 import { ContactSecondNameElement } from "./elements/contactSecondName";
 import { Button } from "@/shared/ui/button/button";
 import { ContactCVElement } from "./elements/contactCV";
+import sContactFormElement from "./style/contactFormElement.module.scss";
 
 interface ContactFormElementsProps<T extends ContactFormDefaultValues>
   extends HTMLAttributes<HTMLFormElement> {
@@ -88,9 +89,11 @@ export const ContactFormElements: ContactFormElementsType = <
 
   return (
     <FormProvider {...form}>
-      <form onSubmit={handleSubmit} className="space-y-8">
-        {children}
-        <FormMessage />
+      <form onSubmit={handleSubmit} className={sContactFormElement.form}>
+        <div className={sContactFormElement.inner}>
+          {children}
+          <FormMessage />
+        </div>
       </form>
     </FormProvider>
   );

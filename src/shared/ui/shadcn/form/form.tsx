@@ -79,7 +79,7 @@ const FormItem = React.forwardRef<
 
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} style={{ padding: "0.5rem 0" }} {...props} />
+      <div ref={ref} {...props} />
     </FormItemContext.Provider>
   );
 });
@@ -93,12 +93,7 @@ const FormItemCol = React.forwardRef<
 
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div
-        ref={ref}
-        style={{ padding: "0.5rem 0" }}
-        className={className}
-        {...props}
-      />
+      <div ref={ref} className={className} {...props} />
     </FormItemContext.Provider>
   );
 });
