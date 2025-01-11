@@ -4,6 +4,7 @@
   --background: var(--color-dark-950);
   --foreground: var(--color-light-0);
   --text-light: var(--color-light-0);
+  --text-secondary: hsl(from var(--color-light-0) h s l / 70%);
   --text-passive: hsl(from var(--color-light-0) h s l / 30%);
   --link: var(--color-light-0);
   --scrollbar: hsl(from var(--color-accent-200) h s l / 60%);

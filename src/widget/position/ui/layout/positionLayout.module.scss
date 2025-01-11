@@ -18,6 +18,14 @@
 .nav {
   @include col;
   @include size(12);
+
+  /* padding-top: 20px; */
+  padding-bottom: 10px;
+
+  @include bp994-block {
+    /* padding-top: 30px; */
+    padding-bottom: 25px;
+  }
 }
 
 .main {

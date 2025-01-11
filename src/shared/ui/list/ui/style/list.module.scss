@@ -1,0 +1,18 @@
+.inner {
+  list-style: none; // убираем стандартный маркер
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+
+  &::before {
+    content: "•"; // или другой маркер
+    margin-right: 0.5em; // отступ между маркером и текстом
+    flex-shrink: 0; // предотвращает сжатие маркера
+  }
+}

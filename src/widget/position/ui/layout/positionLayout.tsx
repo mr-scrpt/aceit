@@ -40,7 +40,9 @@ export const PositionLayout: FC<PositionLayoutProps> = (props) => {
               About The Job
             </Title>
             <Position.Description
-              className={sPositionLayout.responsibilities}
+              className={clsx(sPositionLayout.responsibilities, [
+                sDeco.textSecondary,
+              ])}
             />
           </div>
 
@@ -49,7 +51,9 @@ export const PositionLayout: FC<PositionLayoutProps> = (props) => {
               Responsibilities
             </Title>
             <Position.Responsibilities
-              className={sPositionLayout.responsibilities}
+              className={clsx(sPositionLayout.responsibilities, [
+                sDeco.textSecondary,
+              ])}
             />
           </div>
 
@@ -57,7 +61,11 @@ export const PositionLayout: FC<PositionLayoutProps> = (props) => {
             <Title size="M" className={sPositionLayout.subtitle}>
               Requirements
             </Title>
-            <Position.Requirements className={sPositionLayout.requirements} />
+            <Position.Requirements
+              className={clsx(sPositionLayout.requirements, [
+                sDeco.textSecondary,
+              ])}
+            />
           </div>
         </div>
         <div
