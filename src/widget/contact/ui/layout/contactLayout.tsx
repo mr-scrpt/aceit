@@ -14,11 +14,10 @@ export const ContactLayout: FC<ContactLayoutProps> = (props) => {
   return (
     <section className={clsx(sLayout.wrapper)} id={anchor}>
       <div
-        className={clsx(
-          sContactLayout.inner,
+        className={clsx(sContactLayout.inner, [
           sPage.card,
           sDeco.sectionGradientBorder,
-        )}
+        ])}
       >
         <div className={clsx(sContactLayout.row)}>
           <div className={clsx(sContactLayout.presentation)}>

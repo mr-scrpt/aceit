@@ -77,6 +77,15 @@
   opacity: 0.8;
 }
 
+.sectionPrimary {
+  background: var(--background-dark);
+  padding: 30px 40px;
+
+  @include bp994-block {
+    padding: 60px 80px;
+  }
+}
+
 .sectionGradientPrimary {
   background: var(--text-gradient-radial-ghosty);
 }
