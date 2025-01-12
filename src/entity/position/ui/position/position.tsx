@@ -1,3 +1,4 @@
+"use client";
 import { FC, HTMLAttributes } from "react";
 import { Date } from "@/shared/ui/date/ui/date";
 

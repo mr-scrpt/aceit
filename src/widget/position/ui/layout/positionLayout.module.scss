@@ -4,10 +4,10 @@
 }
 
 .inner {
-  @include row-flex;
-
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @include row-flex;
 
   @include bp994-block {
     padding-top: 60px;
@@ -16,26 +16,24 @@
 }
 
 .nav {
+  padding-bottom: 10px;
+
   @include col;
   @include size(12);
 
-  /* padding-top: 20px; */
-  padding-bottom: 10px;
-
   @include bp994-block {
-    /* padding-top: 30px; */
     padding-bottom: 25px;
   }
 }
 
 .main {
-  @include col;
-  @include size(12);
-  @include size-bp994(8);
-
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include col;
+  @include size(12);
+  @include size-bp994(8);
 
   @include bp994-block {
     gap: 40px;
@@ -53,12 +51,12 @@
 }
 
 .side {
-  @include col;
-  @include size(12);
-  @include size-bp994(4);
-
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   gap: 40px;
+
+  @include col;
+  @include size(12);
+  @include size-bp994(4);
 }

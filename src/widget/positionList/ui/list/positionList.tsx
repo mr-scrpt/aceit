@@ -1,9 +1,9 @@
-import { PositionSnippet, usePositionListModel } from "@/entity/position";
+import { usePositionListModel } from "@/entity/position";
 import { sDeco, sPage } from "@/shared/style";
 import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
-import sList from "./positionList.module.scss";
 import { PositionItem } from "../item/positionItem";
+import sList from "./positionList.module.scss";
 
 interface PositionListProps extends HTMLAttributes<HTMLDivElement> {}
 

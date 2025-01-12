@@ -18,7 +18,7 @@ export const PositionItem: FC<PositionItemProps> = (props) => {
   return (
     <Position className={clsPositionSnippet} position={position}>
       <div className={sPositionSnippet.inner}>
-        <Position.Title size="M">{position.position}</Position.Title>
+        <Position.Title size="M" />
         <Position.TagList className={sPositionSnippet.tagBox} />
         <div className={sPositionSnippet.line}>
           <Position.DatePosted />

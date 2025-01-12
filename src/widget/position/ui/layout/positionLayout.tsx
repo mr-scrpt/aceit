@@ -1,13 +1,12 @@
+"use client";
+import { Position } from "@/entity/position";
+import { useContactSendModal } from "@/features/contactSend";
+import { sDeco, sLayout, sPage } from "@/shared/style";
+import { Button } from "@/shared/ui/button/button";
+import { Title } from "@/shared/ui/title/title";
+import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
 import sPositionLayout from "./positionLayout.module.scss";
-import { Position } from "@/entity/position";
-import { ICON_LIST } from "@/shared/ui/icon/domain/icon.type";
-import { DataRow } from "@/entity/position/ui/dataRow/dataRow";
-import clsx from "clsx";
-import { sDeco, sLayout, sPage } from "@/shared/style";
-import { Title } from "@/shared/ui/title/title";
-import { Button } from "@/shared/ui/button/button";
-import { useContactSendModal } from "@/features/contactSend";
 
 interface PositionLayoutProps extends HTMLAttributes<HTMLDivElement> {
   NavSlot?: React.ReactNode;
