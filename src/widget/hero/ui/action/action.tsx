@@ -1,5 +1,6 @@
 import { Button } from "@/shared/ui/button/button";
-import { Icon } from "@/shared/ui/icon/ui/icon";
+import { MENU_DATA } from "@/shared/ui/menu/model/menu.data";
+import Link from "next/link";
 import { FC, HTMLAttributes } from "react";
 import sAction from "./action.module.scss";
 
@@ -9,21 +10,23 @@ export const Action: FC<ActionProps> = (props) => {
   return (
     <div className={sAction.action}>
       <div className={sAction.inner}>
-        <Button view="PRIMARY" size="XL">
-          Open Position
-        </Button>
+        <Link href={`#${MENU_DATA.jobs.href}`}>
+          <Button view="PRIMARY" size="XL">
+            Open Position
+          </Button>
+        </Link>
 
-        <Button
-          view="TRANSPARENT"
-          size="XL"
-          shape="ROUNDY"
-          className={sAction.buttonMeet}
-          IconSlotRight={(clsIcon) => (
-            <Icon icon="ARROW_FLAT" className={clsIcon} />
-          )}
-        >
-          Meet The Team
-        </Button>
+        {/* <Button */}
+        {/*   view="TRANSPARENT" */}
+        {/*   size="XL" */}
+        {/*   shape="ROUNDY" */}
+        {/*   className={sAction.buttonMeet} */}
+        {/*   IconSlotRight={(clsIcon) => ( */}
+        {/*     <Icon icon="ARROW_FLAT" className={clsIcon} /> */}
+        {/*   )} */}
+        {/* > */}
+        {/*   Meet The Team */}
+        {/* </Button> */}
       </div>
     </div>
   );

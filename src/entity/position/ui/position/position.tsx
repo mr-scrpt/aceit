@@ -12,6 +12,7 @@ import { Tag } from "@/shared/ui/tag";
 import { Paragraph } from "@/shared/ui/paragraph/ui/paragraph";
 import { List } from "@/shared/ui/list/ui/list";
 import { DataRow } from "../dataRow/dataRow";
+import { TitleSizeType } from "@/shared/ui/title/domain/size.type";
 
 interface PositionProps extends HTMLAttributes<HTMLDivElement> {
   position: PositionType;
@@ -38,13 +39,15 @@ export const Position: PositionComponent = (props) => {
 };
 
 // NOTE: Title
-interface PositionTitleProps extends HTMLAttributes<HTMLDivElement> {}
+interface PositionTitleProps extends HTMLAttributes<HTMLDivElement> {
+  size?: TitleSizeType;
+}
 
 Position.Title = function PositionTitle(props: PositionTitleProps) {
-  const { className } = props;
+  const { className, size } = props;
   const { position } = usePositionContext();
   return (
-    <Title className={clsx(sPosition.title, [className])}>
+    <Title className={clsx(sPosition.title, [className])} size={size}>
       {position.position}
     </Title>
   );

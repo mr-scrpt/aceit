@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { sDeco, sLayout, sPage } from "@/shared/style";
 import { Title } from "@/shared/ui/title/title";
 import { Button } from "@/shared/ui/button/button";
+import { useContactSendModal } from "@/features/contactSend";
 
 interface PositionLayoutProps extends HTMLAttributes<HTMLDivElement> {
   NavSlot?: React.ReactNode;
@@ -15,6 +16,7 @@ interface PositionLayoutProps extends HTMLAttributes<HTMLDivElement> {
 
 export const PositionLayout: FC<PositionLayoutProps> = (props) => {
   const { NavSlot, position } = props;
+  const { openContactSendModal } = useContactSendModal();
   return (
     <Position
       position={position}
@@ -83,7 +85,12 @@ export const PositionLayout: FC<PositionLayoutProps> = (props) => {
             <Position.Level className={sPositionLayout.level} />
           </div>
           <div className={sPositionLayout.row}>
-            <Button className={sPositionLayout.button}>Apply Now</Button>
+            <Button
+              className={sPositionLayout.button}
+              onClick={openContactSendModal}
+            >
+              Apply Now
+            </Button>
           </div>
         </div>
       </div>

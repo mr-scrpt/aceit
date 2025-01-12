@@ -3,6 +3,7 @@ import { sDeco, sPage } from "@/shared/style";
 import clsx from "clsx";
 import { FC, HTMLAttributes } from "react";
 import sList from "./positionList.module.scss";
+import { PositionItem } from "../item/positionItem";
 
 interface PositionListProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -13,9 +14,9 @@ export const List: FC<PositionListProps> = (props) => {
       <div className={sList.inner}>
         <div className={sList.list}>
           {positionList.map((p) => (
-            <PositionSnippet
+            <PositionItem
               key={p.id}
-              data={p}
+              position={p}
               className={clsx(
                 sList.item,
                 sPage.card,

@@ -9,6 +9,7 @@ import { sPage } from "@/shared/style";
 
 import { Header } from "@/widget/header";
 import { Footer } from "@/widget/footer";
+import { ProvidersRoot } from "./_providers/rootProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +27,11 @@ export default function RootLayout({
       className={clsx(sPage.size, sPage.geometri, sPage.scrollbar)}
     >
       <body className={clsx(gilroy.className, sDeco.spot, sPage.base)}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ProvidersRoot>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ProvidersRoot>
       </body>
     </html>
   );

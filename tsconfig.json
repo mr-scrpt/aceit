@@ -35,7 +35,7 @@
     "next-env.d.ts",
     "smartgrid-setup.mjs",
     "build/types/**/*.ts"
-  ],
+, "src/widget/modal/modal.provier.tss"  ],
   "exclude": [
     "node_modules"
   ]
