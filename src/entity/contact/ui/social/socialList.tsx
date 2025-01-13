@@ -1,19 +1,20 @@
 import { FC, HTMLAttributes } from "react";
 
+import { Icon } from "@/shared/ui/icon/ui/icon";
+import { useSocialListData } from "../../vm/useSocialListData.model";
 import sSocial from "./social.module.scss";
-import { SOCIAL_LIST } from "./model/social.model";
-import Image from "next/image";
 interface SocialProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const Social: FC<SocialProps> = (props) => {
+export const SocialList: FC<SocialProps> = (props) => {
+  const socialList = useSocialListData();
   return (
     <div className={sSocial.social}>
       <div className={sSocial.inner}>
         <div className={sSocial.list}>
-          {SOCIAL_LIST.map((item) => (
+          {socialList.map((item) => (
             <div key={item.id} className={sSocial.item}>
               <a href={item.href} className={sSocial.link}>
-                <Image src={item.icon} alt={item.title} />
+                <Icon icon={item.icon} className={sSocial.icon} />
               </a>
             </div>
           ))}

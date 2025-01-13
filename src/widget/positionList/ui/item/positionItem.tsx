@@ -1,4 +1,4 @@
-import { Position } from "@/entity/position";
+import { Position, PositionType } from "@/entity/position";
 import { FC, HTMLAttributes } from "react";
 import sPositionSnippet from "./positionItem.module.scss";
 import clsx from "clsx";

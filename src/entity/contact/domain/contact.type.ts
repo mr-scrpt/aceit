@@ -1,3 +1,5 @@
+import { IconListType } from "@/shared/ui/icon/domain/icon.type";
+
 // NOTE: Base
 export type Contact = {
   firstName: string;
@@ -7,6 +9,13 @@ export type Contact = {
   position: string;
   cv: File;
 };
+
+export interface SocialType {
+  id: number;
+  href: string;
+  title: string;
+  icon: IconListType;
+}
 
 // // NOTE: Entity
 // export type ContactEntity = ContactBase & {

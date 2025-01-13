@@ -1,4 +1,5 @@
 import { createStrictContext, useStrictContext } from "@/shared/lib/react";
+import { PositionType } from "../domain/position.type";
 
 interface PositionContextValue {
   position: PositionType;

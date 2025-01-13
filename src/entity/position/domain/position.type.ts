@@ -1,4 +1,4 @@
-interface PositionType {
+export interface PositionType {
   id: number;
   position: string;
   datePosted: string; // ISO date format: YYYY-MM-DD

@@ -1,5 +1,5 @@
 "use client";
-import { Position } from "@/entity/position";
+import { Position, PositionType } from "@/entity/position";
 import { useContactSendModal } from "@/features/contactSend";
 import { sDeco, sLayout, sPage } from "@/shared/style";
 import { Button } from "@/shared/ui/button/button";
@@ -31,9 +31,7 @@ export const PositionLayout: FC<PositionLayoutProps> = (props) => {
           ])}
         >
           <div className={sPositionLayout.row}>
-            <Position.Title className={sPositionLayout.title}>
-              Заголовок
-            </Position.Title>
+            <Position.Title className={sPositionLayout.title} />
             <Position.DatePosted className={sPositionLayout.datePosted} />
           </div>
           <div className={sPositionLayout.row}>

@@ -6,6 +6,9 @@ export const ICON_LIST = {
   CLOCK: "clock",
   LOCATION: "location",
   PROFILE: "profile",
+  INSTA: "insta",
+  LINKEDIN: "linkedin",
+  TG: "tg",
 } as const;
 
 export type IconListType = keyof typeof ICON_LIST;

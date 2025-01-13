@@ -1,3 +1,5 @@
+import { PositionType } from "../domain/position.type";
+
 export const POSITION_LIST: PositionType[] = [
   {
     id: 1,

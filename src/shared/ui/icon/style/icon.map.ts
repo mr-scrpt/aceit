@@ -8,4 +8,7 @@ export const ICON_TO_CLASS = {
   CLOCK: cls.clock,
   LOCATION: cls.location,
   PROFILE: cls.profile,
+  INSTA: cls.insta,
+  LINKEDIN: cls.linkedin,
+  TG: cls.tg,
 };

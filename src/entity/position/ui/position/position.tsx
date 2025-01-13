@@ -6,7 +6,7 @@ import clsx from "clsx";
 import {
   PositionProvider,
   usePositionContext,
-} from "../vm/usePostionContext.model";
+} from "../../vm/usePostionContext.model";
 import sPosition from "./position.module.scss";
 import { Title } from "@/shared/ui/title/title";
 import { Tag } from "@/shared/ui/tag";
@@ -14,6 +14,7 @@ import { Paragraph } from "@/shared/ui/paragraph/ui/paragraph";
 import { List } from "@/shared/ui/list/ui/list";
 import { DataRow } from "../dataRow/dataRow";
 import { TitleSizeType } from "@/shared/ui/title/domain/size.type";
+import { PositionType } from "../../domain/position.type";
 
 interface PositionProps extends HTMLAttributes<HTMLDivElement> {
   position: PositionType;
@@ -42,6 +43,7 @@ export const Position: PositionComponent = (props) => {
 // NOTE: Title
 interface PositionTitleProps extends HTMLAttributes<HTMLDivElement> {
   size?: TitleSizeType;
+  children?: never;
 }
 
 Position.Title = function PositionTitle(props: PositionTitleProps) {
@@ -55,7 +57,9 @@ Position.Title = function PositionTitle(props: PositionTitleProps) {
 };
 
 // NOTE: Date Posted
-interface PositionDatePostedProps extends HTMLAttributes<HTMLDivElement> {}
+interface PositionDatePostedProps extends HTMLAttributes<HTMLDivElement> {
+  children?: never;
+}
 
 Position.DatePosted = function PositionDatePosted(
   props: PositionDatePostedProps,
@@ -70,7 +74,9 @@ Position.DatePosted = function PositionDatePosted(
 };
 
 // NOTE: Description
-interface PositionDescriptionProps extends HTMLAttributes<HTMLDivElement> {}
+interface PositionDescriptionProps extends HTMLAttributes<HTMLDivElement> {
+  children?: never;
+}
 
 Position.Description = function PositonDescription(
   props: PositionDescriptionProps,
@@ -85,8 +91,9 @@ Position.Description = function PositonDescription(
 };
 
 // NOTE: Responsibilities
-interface PositionResponsibilitiesProps
-  extends HTMLAttributes<HTMLDivElement> {}
+interface PositionResponsibilitiesProps extends HTMLAttributes<HTMLDivElement> {
+  children?: never;
+}
 
 Position.Responsibilities = function PositionResponsibilities(
   props: PositionResponsibilitiesProps,
@@ -102,7 +109,9 @@ Position.Responsibilities = function PositionResponsibilities(
 };
 
 // NOTE: Requirements
-interface PositionRequirementsProps extends HTMLAttributes<HTMLDivElement> {}
+interface PositionRequirementsProps extends HTMLAttributes<HTMLDivElement> {
+  children?: never;
+}
 
 Position.Requirements = function PositionRequirements(
   props: PositionRequirementsProps,
@@ -118,7 +127,9 @@ Position.Requirements = function PositionRequirements(
 };
 
 // NOTE: Employment Type
-interface PositionEmploymentTypeProps extends HTMLAttributes<HTMLDivElement> {}
+interface PositionEmploymentTypeProps extends HTMLAttributes<HTMLDivElement> {
+  children?: never;
+}
 
 Position.EmploymentType = function PositionEmploymentType(
   props: PositionEmploymentTypeProps,
@@ -136,7 +147,9 @@ Position.EmploymentType = function PositionEmploymentType(
 };
 
 // NOTE: Location
-interface PositionLocationProps extends HTMLAttributes<HTMLDivElement> {}
+interface PositionLocationProps extends HTMLAttributes<HTMLDivElement> {
+  children?: never;
+}
 
 Position.Location = function PositionLocation(props: PositionLocationProps) {
   const { className } = props;
@@ -152,7 +165,9 @@ Position.Location = function PositionLocation(props: PositionLocationProps) {
 };
 
 // NOTE: Level
-interface PositionLevelProps extends HTMLAttributes<HTMLDivElement> {}
+interface PositionLevelProps extends HTMLAttributes<HTMLDivElement> {
+  children?: never;
+}
 
 Position.Level = function PositionLevel(props: PositionLevelProps) {
   const { className } = props;
@@ -168,7 +183,9 @@ Position.Level = function PositionLevel(props: PositionLevelProps) {
 };
 
 // NOTE: Tag List
-interface PositionTagListProps extends HTMLAttributes<HTMLDivElement> {}
+interface PositionTagListProps extends HTMLAttributes<HTMLDivElement> {
+  children?: never;
+}
 
 Position.TagList = function PositionTagList(props: PositionTagListProps) {
   const { className } = props;
@@ -176,8 +193,8 @@ Position.TagList = function PositionTagList(props: PositionTagListProps) {
   const tagList = position.employmentType.concat(position.level);
   return (
     <div className={clsx(sPosition.title, [className])}>
-      {tagList.map((e) => (
-        <Tag key={e}>{e}</Tag>
+      {tagList.map((t: string) => (
+        <Tag key={t}>{t}</Tag>
       ))}
     </div>
   );
