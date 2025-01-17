@@ -8,6 +8,7 @@ import { Sport } from "./sport/sport";
 import { Office } from "./office/office";
 import { Course } from "./course/course";
 import { MENU_DATA } from "@/shared/ui/menu/model/menu.data";
+import { People } from "./people/people";
 
 interface AboutModuleProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -15,7 +16,7 @@ export const AboutModule: FC<AboutModuleProps> = (props) => {
   return (
     <AboutLayout
       TextSlot={<Text />}
-      PeopleSlot={<div>People</div>}
+      PeopleSlot={<People />}
       WorkSlot={<Work />}
       SnackSlot={<Snack />}
       SportSlot={<Sport />}

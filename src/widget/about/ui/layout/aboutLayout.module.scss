@@ -46,6 +46,20 @@
   }
 }
 
+.peopleGradient {
+  display: none;
+
+  @include bp994-block {
+    display: block;
+
+    /* position: absolute; */
+
+    /* inset: 0; */
+
+    /* background: var(--gradient-light-to-transparent-to-light); */
+  }
+}
+
 .work {
   margin-top: 15px;
   margin-bottom: 15px;

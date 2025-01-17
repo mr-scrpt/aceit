@@ -39,8 +39,17 @@ export const AboutLayout: FC<AboutLayoutProps> = (props) => {
             )}
           >
             {PeopleSlot}
-            <div className={sDeco.sectionGradientLeftBottom}></div>
-            <div className={sDeco.sectionGradientRightTop}></div>
+            <div
+              className={clsx(sDeco.sectionGradientLeftBottom, [
+                sAboutLayout.peopleGradient,
+              ])}
+            ></div>
+            <div
+              className={clsx(sDeco.sectionGradientRightTop, [
+                sAboutLayout.peopleGradient,
+              ])}
+            ></div>
+            <div className={sDeco.sectionBackgroundImgStars}></div>
           </div>
         </div>
         <div className={sAboutLayout.row}>

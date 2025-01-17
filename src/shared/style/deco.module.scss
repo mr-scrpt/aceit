@@ -302,6 +302,28 @@
 
 /* BACKGROUND IMG */
 
+.sectionBackgroundImgStars {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: url("./img/deco/img_stars.png") no-repeat center;
+
+    /* mix-blend-mode: screen; */
+  }
+}
+
 .sectionBackgroundImgCircleRightTop {
   position: absolute;
   width: 100%;
