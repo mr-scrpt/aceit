@@ -24,6 +24,7 @@ export interface SocialType {
 //   updatedAt: Date;
 // };
 //
+//
 // // NOTE: Projetions
 // export type Contact = ContactBase & {
 //   id: string;
