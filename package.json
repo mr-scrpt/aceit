@@ -2,6 +2,9 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "react": "$react"
+  },
   "scripts": {
     "start:dev": "next dev --turbopack",
     "start:build": "next build && cp -r server build/server",
