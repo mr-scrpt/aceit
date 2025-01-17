@@ -9,6 +9,7 @@
     "start:dev": "next dev --turbopack",
     "start:build": "next build && cp -r server build/server",
     "start:server": "php -S localhost:8080 -t server/",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier -w ."
