@@ -18,7 +18,7 @@ export const Work: FC<WorkProps> = (props) => {
         </Title>
         <div className={clsx(sWork.description, sDeco.textGhosty)}>
           We provide you with a personal computer so that you can perform all
-          your tasks and stay in touch with the team
+          your tasks and stay in touch with the team.
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ export const Office: FC<OfficeProps> = (props) => {
             </Title>
             <div className={clsx(sOffice.description, sDeco.textGhosty)}>
               Office near metro We are able to provide you access to a spacious
-              office that is close to metro
+              office that is close to metro.
             </div>
           </div>
           <div className={sOffice.textRow}>
@@ -32,7 +32,7 @@ export const Office: FC<OfficeProps> = (props) => {
             </Title>
             <div className={clsx(sOffice.description, sDeco.textGhosty)}>
               Work from home if it is more comfortable for you and will enhance
-              the results
+              the results.
             </div>
           </div>
         </div>

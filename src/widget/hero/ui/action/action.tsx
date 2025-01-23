@@ -12,21 +12,9 @@ export const Action: FC<ActionProps> = (props) => {
       <div className={sAction.inner}>
         <Link href={`#${MENU_DATA.jobs.href}`}>
           <Button view="PRIMARY" size="XL">
-            Open Position
+            Open positions
           </Button>
         </Link>
-
-        {/* <Button */}
-        {/*   view="TRANSPARENT" */}
-        {/*   size="XL" */}
-        {/*   shape="ROUNDY" */}
-        {/*   className={sAction.buttonMeet} */}
-        {/*   IconSlotRight={(clsIcon) => ( */}
-        {/*     <Icon icon="ARROW_FLAT" className={clsIcon} /> */}
-        {/*   )} */}
-        {/* > */}
-        {/*   Meet The Team */}
-        {/* </Button> */}
       </div>
     </div>
   );

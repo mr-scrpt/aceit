@@ -21,7 +21,7 @@ export const PositionItem: FC<PositionItemProps> = (props) => {
         <Position.Title size="M" />
         <Position.TagList className={sPositionSnippet.tagBox} />
         <div className={sPositionSnippet.line}>
-          <Position.DatePosted />
+          {/* <Position.DatePosted /> */}
           <Link href={`${position.id}`} className={sPositionSnippet.link}>
             <ButtonWithIconBox
               view="WITH_ICON"

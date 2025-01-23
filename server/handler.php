@@ -5,8 +5,8 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 $recipients = [
     'dolcegabbana2010@gmail.com',
-    'second@example.com',
-    'third@example.com'
+    'hr@aceit.group',
+    'wall4media@gmail.com'
 ];
 
 // Функция для логирования

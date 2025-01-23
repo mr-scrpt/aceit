@@ -1,6 +1,5 @@
 "use client";
 import { Position, PositionType } from "@/entity/position";
-import { useContactSendModal } from "@/features/contactSend";
 import { sDeco, sLayout, sPage } from "@/shared/style";
 import { Button } from "@/shared/ui/button/button";
 import { Title } from "@/shared/ui/title/title";
@@ -11,11 +10,11 @@ import sPositionLayout from "./positionLayout.module.scss";
 interface PositionLayoutProps extends HTMLAttributes<HTMLDivElement> {
   NavSlot?: React.ReactNode;
   position: PositionType;
+  openContactSendModal?: () => void;
 }
 
 export const PositionLayout: FC<PositionLayoutProps> = (props) => {
-  const { NavSlot, position } = props;
-  const { openContactSendModal } = useContactSendModal();
+  const { NavSlot, position, openContactSendModal } = props;
   return (
     <Position
       position={position}
@@ -32,7 +31,7 @@ export const PositionLayout: FC<PositionLayoutProps> = (props) => {
         >
           <div className={sPositionLayout.row}>
             <Position.Title className={sPositionLayout.title} />
-            <Position.DatePosted className={sPositionLayout.datePosted} />
+            {/* <Position.DatePosted className={sPositionLayout.datePosted} /> */}
           </div>
           <div className={sPositionLayout.row}>
             <Title size="M" className={sPositionLayout.subtitle}>

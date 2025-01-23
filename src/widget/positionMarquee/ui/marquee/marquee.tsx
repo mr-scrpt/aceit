@@ -1,13 +1,16 @@
 "use client";
+import { usePositionNameListModel } from "@/entity/position";
 import { FC, useEffect, useRef, useState } from "react";
-import styles from "./marquee.module.scss";
-import { shuffleArray } from "../../helper/shuffleArray.helper";
 import {
-  MarqueeProps,
   APPEARANCE,
   ColoredItem,
+  MarqueeProps,
 } from "../../domain/postionMarquee.type";
-import { usePositionNameListModel } from "@/entity/position";
+import {
+  createRepeatedShuffledArray,
+  shuffleArray,
+} from "@/shared/lib/shuffleArray.helper";
+import styles from "./marquee.module.scss";
 
 export const Marquee: FC<MarqueeProps> = ({ className }) => {
   const { positionNameList } = usePositionNameListModel();
@@ -151,35 +154,15 @@ export const Marquee: FC<MarqueeProps> = ({ className }) => {
   }, [coloredItems, isInitializedRef.current]);
 
   useEffect(() => {
-    const shuffledTopRowItems = shuffleArray([
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-    ]);
+    const shuffledTopRowItems = createRepeatedShuffledArray(
+      positionNameList,
+      13,
+    );
 
-    const shuffledBottomRowItems = shuffleArray([
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-      ...positionNameList,
-    ]);
+    const shuffledBottomRowItems = createRepeatedShuffledArray(
+      positionNameList,
+      13,
+    );
 
     setTopRowItems(shuffledTopRowItems);
     setBottomRowItems(shuffledBottomRowItems);

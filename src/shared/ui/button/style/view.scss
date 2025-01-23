@@ -31,7 +31,8 @@
 
   & .text {
     letter-spacing: 0.04em;
-    text-transform: capitalize;
+
+    /* text-transform: capitalize; */
     color: var(--text-light);
     font-weight: 700;
   }

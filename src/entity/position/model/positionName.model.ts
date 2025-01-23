@@ -38,4 +38,29 @@ export const POSITION_NAME_LIST = [
     id: 9,
     position: "Content Writer",
   },
+
+  {
+    id: 10,
+    position: "Manual QA",
+  },
+
+  {
+    id: 11,
+    position: "Game Manager",
+  },
+
+  {
+    id: 12,
+    position: "Retention Manager",
+  },
+
+  {
+    id: 13,
+    position: "Copywriter",
+  },
+
+  {
+    id: 14,
+    position: "Product Manager",
+  },
 ];
