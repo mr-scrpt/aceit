@@ -9,7 +9,6 @@ $recipients = [
     'wall4media@gmail.com'
 ];
 
-// Функция для логирования
 function writeLog($type, $message, $data = null) {
     $logDir = __DIR__ . '/logs';
     // Создаем директорию для логов, если её нет
