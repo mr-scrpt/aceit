@@ -6,7 +6,7 @@ export const POSITION_LIST: PositionType[] = [
     position: "Affiliate Manager",
     datePosted: "2023-02-15",
     about:
-      "We are looking for: a candidate with strong English and communicative skills to work with webmasters in order to extend and maintain new traffic sources.",
+      "We are  looking for: a candidate with strong English and communicative skills to work with webmasters in order to extend and maintain new traffic sources.",
     responsibilities: [
       "Search for new traffic sources and new potential affiliates;",
       "Maintain communication with partners to meet all business needs and build long-term relationships;",

@@ -4,7 +4,6 @@ header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
 $recipients = [
-    'dolcegabbana2010@gmail.com',
     'hr@aceit.group',
     'wall4media@gmail.com'
 ];

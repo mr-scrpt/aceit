@@ -16,8 +16,8 @@ export const Text: FC<TextProps> = (props) => {
           Get to know us better
         </Title>
         <div className={clsx(sText.description, sDeco.textGhosty)}>
-          We are young, dynamic IT company providing smart solutions. Your ideas
-          turn into success cases.
+          We are a young, dynamic IT company providing smart solutions. Your
+          ideas turn into success cases.
         </div>
       </div>
     </div>
